@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8e473d07-d6ff-46a3-850d-de6af2d7b207" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ClickSign.NetCore/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ClickSign.NetCore/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ClickSign.NetCore/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ClickSign.NetCore/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ClickSign.NetCore/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/ClickSign.snk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Cardinal.ClickSign/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Cardinal.ClickSign/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Cardinal.ClickSign/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Cardinal.ClickSign/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Cardinal.ClickSign/.idea/riderPublish.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Cardinal.ClickSign/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign.Tests/Cardinal.ClickSign.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore.Tests/ClickSign.NetCore.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign.Tests/DOCUMENT.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore.Tests/DOCUMENT.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign.Tests/DocumentsTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore.Tests/DocumentsTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign.Tests/SignersTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore.Tests/SignersTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign.WebApi/Cardinal.ClickSign.WebApi.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign.WebApi/Cardinal.ClickSign.WebApi.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign.WebApi/Cardinal.snk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign.WebApi/CardinalConstants.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign.WebApi/Controllers/WebhookController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign.WebApi/Enumerators/SettingsProvider.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign.WebApi/Exceptions/WebhookNotEnabledException.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign.WebApi/Extensions/ConfigurationSectionExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign.WebApi/Extensions/HttpRequestExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign.WebApi/Extensions/IServiceCollectionExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign.WebApi/Implementations/ClickSignService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign.WebApi/Implementations/DefaultWebhookService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign.WebApi/Interfaces/IClickSignService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign.WebApi/Interfaces/IWebhookService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign.WebApi/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/LICENSE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign.WebApi/Settings/ClickSignSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign.sln" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Cardinal.ClickSign.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/ClickSign.NetCore.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Cardinal.ClickSign.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Cardinal.snk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/ClickSignClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/ClickSignClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/ClickSignConstants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/ClickSignConstants.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Converters/AuthTypesConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Converters/AuthTypesConverter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Converters/DateFormatConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Converters/DateFormatConverter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Converters/DeliveryTypeConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Converters/DeliveryTypeConverter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Converters/DocumentStatusConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Converters/DocumentStatusConverter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Converters/EventTypeConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Converters/EventTypeConverter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Converters/LocalesConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Converters/LocalesConverter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Converters/SignTypeConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Converters/SignTypeConverter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Converters/SignatureValidationConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Converters/SignatureValidationConverter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Enumerators/ApiEnvironment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Enumerators/ApiEnvironment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Enumerators/ApiVersion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Enumerators/ApiVersion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Enumerators/AuthType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Enumerators/AuthType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Enumerators/DeliveryType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Enumerators/DeliveryType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Enumerators/DocumentStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Enumerators/DocumentStatus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Enumerators/EventType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Enumerators/EventType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Enumerators/Locales.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Enumerators/Locales.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Enumerators/NotificationType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Enumerators/NotificationType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Enumerators/SignType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Enumerators/SignType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Enumerators/SignatureValidationStatus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Enumerators/SignatureValidationStatus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Exceptions/ClickSignException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Exceptions/ClickSignException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Exceptions/ClickSignRequestException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Exceptions/ClickSignRequestException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Exceptions/HttpException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Exceptions/HttpException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Exceptions/WebhookUnauthorizedException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Exceptions/WebhookUnauthorizedException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Extensions/StreamExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Extensions/StreamExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Extensions/UploadRequestExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Extensions/UploadRequestExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/Account.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/Account.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/AddSignerRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/AddSignerRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/AddSignerResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/AddSignerResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/BatchRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/BatchRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/BatchResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/BatchResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/CreateSignerRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/CreateSignerRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/Document.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/Document.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/DocumentSigner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/DocumentSigner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/Download.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/Download.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/Event.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/Event.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/EventData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/EventData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/EventItems/EventAccount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/EventItems/EventAccount.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/EventItems/EventSigner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/EventItems/EventSigner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/EventItems/EventUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/EventItems/EventUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/HooksRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/HooksRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/HooksResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/HooksResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/Internals/InternalAddSignerDocumentRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/Internals/InternalAddSignerDocumentRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/Internals/InternalBatchRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/Internals/InternalBatchRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/Internals/InternalCreateSignerRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/Internals/InternalCreateSignerRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/Internals/InternalResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/Internals/InternalResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/Internals/InternalUploadRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/Internals/InternalUploadRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/NotificationRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/NotificationRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/Signature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/Signature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/SignatureValidation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/SignatureValidation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/Signer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/Signer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/SignerRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/SignerRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/UploadRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/UploadRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Models/WebhookRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/WebhookRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Security/HmacSignatureValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Security/HmacSignatureValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Security/WebhookData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Security/WebhookData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Utils/ApiHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Utils/ApiHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Utils/Mimetype/Metadata.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Utils/Mimetype/Metadata.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Utils/Mimetype/MimeTypes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Utils/Mimetype/MimeTypes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Utils/Mimetype/MimetypeExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Utils/Mimetype/MimetypeExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Utils/Mimetype/Node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Utils/Mimetype/Node.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Utils/Mimetype/Offset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Utils/Mimetype/Offset.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Utils/Mimetype/Record.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Utils/Mimetype/Record.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Utils/Mimetype/Sniffer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Utils/Mimetype/Sniffer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cardinal.ClickSign/Utils/MimetypeDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClickSign.NetCore/Utils/MimetypeDetector.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/9f4b1f5d664afdfc80e1508ab7ed099dff210fbd/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Attributes/JsonConverterAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2iO5vm5OGg6sDRkxMYTdiWq4PbG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "A:/Development/guia-facil/clicksign/Cardinal.ClickSign.sln",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\luis_\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\luis_\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\luis_\\AppData\\Local\\Symbols\\src"
+    ]
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8e473d07-d6ff-46a3-850d-de6af2d7b207" name="Changes" comment="" />
+      <created>1719349015721</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719349015721</updated>
+      <workItem from="1719349016830" duration="4286000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

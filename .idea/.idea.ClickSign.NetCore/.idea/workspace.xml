@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8e473d07-d6ff-46a3-850d-de6af2d7b207" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Cardinal.ClickSign/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ClickSign.NetCore/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ClickSign.NetCore/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ClickSign.NetCore/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ClickSign.NetCore/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ClickSign.NetCore/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore.Tests/ClickSign.NetCore.Tests.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore.Tests/DocumentsTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore.Tests/SignersTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore.Tests/document-test.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/ClickSign.NetCore.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/ClickSign.NetCore.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/ClickSign.snk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/ClickSignClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/ClickSignConstants.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Converters/AuthTypesConverter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Converters/DateFormatConverter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Converters/DeliveryTypeConverter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Converters/DocumentStatusConverter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Converters/EventTypeConverter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Converters/LocalesConverter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Converters/SignTypeConverter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Converters/SignatureValidationConverter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Enumerators/ApiEnvironment.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Enumerators/ApiVersion.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Enumerators/AuthType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Enumerators/DeliveryType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Enumerators/DocumentStatus.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Enumerators/EventType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Enumerators/Locales.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Enumerators/NotificationType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Enumerators/SignType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Enumerators/SignatureValidationStatus.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Exceptions/ClickSignException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Exceptions/ClickSignRequestException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Exceptions/HttpException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Exceptions/WebhookUnauthorizedException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Extensions/StreamExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Extensions/UploadRequestExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/Account.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/AddSignerRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/AddSignerResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/BatchRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/BatchResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/CreateSignerRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/Document.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/DocumentSigner.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/Download.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/Event.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/EventData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/EventItems/EventAccount.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/EventItems/EventSigner.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/EventItems/EventUser.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/HooksRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/HooksResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/Internals/InternalAddSignerDocumentRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/Internals/InternalBatchRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/Internals/InternalCreateSignerRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/Internals/InternalResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/Internals/InternalUploadRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/NotificationRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/Signature.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/SignatureValidation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/Signer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/SignerRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/UploadRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Models/WebhookRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Security/HmacSignatureValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Security/WebhookData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Utils/ApiHelper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Utils/Mimetype/Metadata.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Utils/Mimetype/MimeTypes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Utils/Mimetype/MimetypeExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Utils/Mimetype/Node.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Utils/Mimetype/Offset.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Utils/Mimetype/Record.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Utils/Mimetype/Sniffer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ClickSign.NetCore/Utils/MimetypeDetector.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/087e15321bb712ef6fe8b0ba6f8bd12facf92629/src/libraries/System.Collections.Concurrent/src/System/Collections/Concurrent/ConcurrentDictionary.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/087e15321bb712ef6fe8b0ba6f8bd12facf92629/src/libraries/System.Private.CoreLib/src/System/Guid.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/087e15321bb712ef6fe8b0ba6f8bd12facf92629/src/libraries/System.Private.CoreLib/src/System/Text/ValueStringBuilder.AppendFormat.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/087e15321bb712ef6fe8b0ba6f8bd12facf92629/src/libraries/System.Private.CoreLib/src/System/Threading/Tasks/Future.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/087e15321bb712ef6fe8b0ba6f8bd12facf92629/src/libraries/System.Private.CoreLib/src/System/Threading/Tasks/Task.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/087e15321bb712ef6fe8b0ba6f8bd12facf92629/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/JsonConverterOfT.ReadCore.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/087e15321bb712ef6fe8b0ba6f8bd12facf92629/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/JsonConverterOfT.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/087e15321bb712ef6fe8b0ba6f8bd12facf92629/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Metadata/DefaultJsonTypeInfoResolver.Converters.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/087e15321bb712ef6fe8b0ba6f8bd12facf92629/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Metadata/DefaultJsonTypeInfoResolver.Helpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/31f86fec2f3d4f5fa4c35ec01361289b22d20/34/cb19caef/TestMethodInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/51b79d97737f4518bc080179e145ce9fb9d8/e1/e8444cc1/Executor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ab459dec108948a5b911622cfa5f50a8125f0/3b/d983c0d7/Assert.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2iO5vm5OGg6sDRkxMYTdiWq4PbG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "1e755919-0927-4fb3-a67c-45fc968fb13c.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "e4ddbdeb-eb57-44e6-b878-d685e688fea5.executor": "Debug",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "A:/Development/guia-facil/clicksign/Cardinal.ClickSign.sln",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\luis_\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\luis_\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\luis_\\AppData\\Local\\Symbols\\src"
+    ]
+  }
+}]]></component>
+  <component name="RunManager" selected="1e755919-0927-4fb3-a67c-45fc968fb13c" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8e473d07-d6ff-46a3-850d-de6af2d7b207" name="Changes" comment="" />
+      <created>1719349015721</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719349015721</updated>
+      <workItem from="1719349016830" duration="359000" />
+      <workItem from="1719368117799" duration="330000" />
+      <workItem from="1719368490791" duration="8039000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ClickSign.NetCore.Tests/DocumentsTests.cs</url>
+          <line>27</line>
+          <properties documentPath="A:\Development\guia-facil\clicksign-netcore\ClickSign.NetCore.Tests\DocumentsTests.cs" containingFunctionPresentation="Method 'GetAllTest'">
+            <startOffsets>
+              <option value="644" />
+            </startOffsets>
+            <endOffsets>
+              <option value="700" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ClickSign.NetCore.Tests/SignersTests.cs</url>
+          <line>20</line>
+          <properties documentPath="A:\Development\guia-facil\clicksign-netcore\ClickSign.NetCore.Tests\SignersTests.cs" containingFunctionPresentation="Method 'CreateSigner'">
+            <startOffsets>
+              <option value="455" />
+            </startOffsets>
+            <endOffsets>
+              <option value="456" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ClickSign.NetCore.Tests/SignersTests.cs</url>
+          <line>39</line>
+          <properties documentPath="A:\Development\guia-facil\clicksign-netcore\ClickSign.NetCore.Tests\SignersTests.cs" containingFunctionPresentation="Method 'AddSignerToDoc'">
+            <startOffsets>
+              <option value="1012" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1013" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

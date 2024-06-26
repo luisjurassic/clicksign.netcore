@@ -1,0 +1,2619 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClickSign.NetCore</name>
+    </assembly>
+    <members>
+        <member name="T:ClickSign.NetCore.ClickSignClient">
+            <summary>
+            Classe que atua como cliente para os serviços ClickSign.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.#ctor(System.Guid,ClickSign.NetCore.Enumerators.ApiEnvironment)">
+            <summary>
+            Método construtor.
+            </summary>
+            <param name="apiKey">Chave de api usada na autenticação do serviço.</param>
+            <param name="environment">Ambiente ao qual se destinarão as requisições. <see cref="P:ClickSign.NetCore.ClickSignClient.ApiEnvironment" /></param>
+        </member>
+        <member name="P:ClickSign.NetCore.ClickSignClient.ApiKey">
+            <summary>
+            Chave de api usada na autenticação do serviço.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.ClickSignClient.ApiEnvironment">
+            <summary>
+            Tipo de ambiente
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.ClickSignClient.Client">
+            <summary>
+            Cliente rest responsável pelo gerenciamento das requisições.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.Upload(ClickSign.NetCore.Models.UploadRequest)">
+            <summary>
+            Método que efetua o envio de um novo documento para assinatura no serviço.
+            </summary>
+            <param name="request">Requisição de upload de novo arquivo. <see cref="T:ClickSign.NetCore.Models.UploadRequest" /></param>
+            <returns>Dados do documento criado no ambiente.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.UploadAsync(ClickSign.NetCore.Models.UploadRequest,System.Threading.CancellationToken)">
+            <summary>
+            Método que efetua o envio de um novo documento para assinatura no serviço de forma assíncrona.
+            </summary>
+            <param name="request">Requisição de upload de novo arquivo. <see cref="T:ClickSign.NetCore.Models.UploadRequest" /></param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <returns>Dados do documento criado no ambiente.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.Get">
+            <summary>
+            Método que efetua a busca de todos os documentos.
+            </summary>
+            <returns>Lista contendo os dados de todos os documentos do serviço.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.GetAsync(System.Threading.CancellationToken)">
+            <summary>
+            Método que efetua a busca de todos os documentos de forma assíncrona.
+            </summary>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <returns>Lista contendo os dados de todos os documentos do serviço.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.Get(System.Guid)">
+            <summary>
+            Método que efetua a busca de um documento previamente cadastrado no serviço.
+            </summary>
+            <param name="key">Chave única do documento.</param>
+            <returns>Dados do documento associado à chave informada. <see cref="T:ClickSign.NetCore.Models.Document" /></returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.GetAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Método que efetua a busca de um documento previamente cadastrado no serviço de forma assíncrona.
+            </summary>
+            <param name="key">Chave única do documento.</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <returns>Dados do documento associado à chave informada. <see cref="T:ClickSign.NetCore.Models.Document" /></returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.Finalize(System.Guid)">
+            <summary>
+            Método que efetua a finalização de um documento ativo.
+            </summary>
+            <param name="key">Chave única do documento.</param>
+            <returns>Dados do documento associado à chave informada. <see cref="T:ClickSign.NetCore.Models.Document" /></returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.FinalizeAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Método que efetua a finalização de um documento ativo de forma assíncrona.
+            </summary>
+            <param name="key">Chave única do documento.</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <returns>Dados do documento associado à chave informada. <see cref="T:ClickSign.NetCore.Models.Document" /></returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.Cancel(System.Guid)">
+            <summary>
+            Método que efetua o cancelamento de um documento ativo.
+            </summary>
+            <param name="key">Chave única do documento.</param>
+            <returns>Dados do documento associado à chave informada. <see cref="T:ClickSign.NetCore.Models.Document" /></returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.CancelAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Método que efetua o cancelamento de um documento ativo de forma assíncrona.
+            </summary>
+            <param name="key">Chave única do documento.</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <returns>Dados do documento associado à chave informada. <see cref="T:ClickSign.NetCore.Models.Document" /></returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.Duplicate(System.Guid)">
+            <summary>
+            Método que efetua a duplicação de um documento ativo.
+            </summary>
+            <param name="key">Chave única do documento.</param>
+            <returns>Dados do documento duplicado. <see cref="T:ClickSign.NetCore.Models.Document" /></returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.DuplicateAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Método que efetua a duplicação de um documento ativo de forma assíncrona.
+            </summary>
+            <param name="key">Chave única do documento.</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <returns>Dados do documento duplicado. <see cref="T:ClickSign.NetCore.Models.Document" /></returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.GetSigner(System.Guid)">
+            <summary>
+            Método que traz os dados de um determinado assinante.
+            </summary>
+            <param name="key">Chave única do assinante.</param>
+            <returns>Dados do assinante referentes à chave informada. <see cref="T:ClickSign.NetCore.Models.Signer" /></returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.GetSignerAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Método que traz os dados de um determinado assinante de forma assíncrona.
+            </summary>
+            <param name="key">Chave única do assinante.</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <returns>Dados do assinante referentes à chave informada. Veja <see cref="T:ClickSign.NetCore.Models.Signer" />.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.CreateSigner(ClickSign.NetCore.Models.CreateSignerRequest)">
+            <summary>
+            Método que efetua o cadastro de um novo assinante.
+            </summary>
+            <param name="request">Dados de requisição de criação do novo assinante. <see cref="T:ClickSign.NetCore.Models.CreateSignerRequest" /></param>
+            <returns>Dados do assinante recém criado. <see cref="T:ClickSign.NetCore.Models.Signer" /></returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.CreateSignerAsync(ClickSign.NetCore.Models.CreateSignerRequest,System.Threading.CancellationToken)">
+            <summary>
+            Método que efetua o cadastro de um novo assinante de forma assíncrona.
+            </summary>
+            <param name="request">Dados de requisição de criação do novo assinante. <see cref="T:ClickSign.NetCore.Models.CreateSignerRequest" /></param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <returns>Dados do assinante recém criado. <see cref="T:ClickSign.NetCore.Models.Signer" /></returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.AddSignerToDocument(ClickSign.NetCore.Models.AddSignerRequest)">
+            <summary>
+            Método que efetua a associação de um assinante à um documento à ser assinado.
+            </summary>
+            <param name="request">Dados da requisição de adição de assinante ao documento. <see cref="T:ClickSign.NetCore.Models.AddSignerRequest" /></param>
+            <returns>Resposta da adição do assinante ao documento. <see cref="T:ClickSign.NetCore.Models.AddSignerResponse" /></returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.AddSignerToDocumentAsync(ClickSign.NetCore.Models.AddSignerRequest,System.Threading.CancellationToken)">
+            <summary>
+            Método que efetua a associação de um assinante à um documento à ser assinado de forma assíncrona.
+            </summary>
+            <param name="request">Dados da requisição de adição de assinante ao documento. <see cref="T:ClickSign.NetCore.Models.AddSignerRequest" /></param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <returns>Resposta da adição do assinante ao documento. <see cref="T:ClickSign.NetCore.Models.AddSignerResponse" /></returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.RemoveSignerFromDocument(System.Guid)">
+            <summary>
+            Método que efetua a remoção de um assinante de um documento.
+            </summary>
+            <param name="key">Chave da associação do assinante ao documento.</param>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.RemoveSignerFromDocumentAsync(System.Guid,System.Threading.CancellationToken)">
+            <summary>
+            Método que efetua a remoção de um assinante de um documento de forma assíncrona.
+            </summary>
+            <param name="key">Chave da associação do assinante ao documento.</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <returns>Tarefa assíncrona.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.SignerToDocument(ClickSign.NetCore.Models.SignerRequest)">
+            <summary>
+            Método que cria uma assinatura em lotes de documentos com um assinante em comum.
+            </summary>
+            <param name="request">Dados da requisição de criação da assinatura em lotes. Veja <see cref="T:ClickSign.NetCore.Models.BatchRequest" /></param>
+            <returns>Dados da assinatura em lotes criada. Veja <see cref="T:ClickSign.NetCore.Models.BatchResponse" />.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.SignerToDocumentAsync(ClickSign.NetCore.Models.SignerRequest,System.Threading.CancellationToken)">
+            <summary>
+            Método que cria uma assinatura em lotes de documentos com um assinante em comum de forma assíncrona.
+            </summary>
+            <param name="request">Dados da requisição de criação da assinatura em lotes. Veja <see cref="T:ClickSign.NetCore.Models.BatchRequest" />.</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <returns>Dados da assinatura em lotes criada. Veja <see cref="T:ClickSign.NetCore.Models.BatchResponse" />.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.SendNotification(ClickSign.NetCore.Models.NotificationRequest)">
+            <summary>
+            Método que efetua o envio de um lembrete de assinatura de um documento.
+            </summary>
+            <param name="request">Dados da requisição de envio de notificação. Veja <see cref="T:ClickSign.NetCore.Models.NotificationRequest" />.</param>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.SendNotificationAsync(ClickSign.NetCore.Models.NotificationRequest,System.Threading.CancellationToken)">
+            <summary>
+            Método que efetua o envio de um lembrete de assinatura de um documento de forma assíncrona.
+            </summary>
+            <param name="request">Dados da requisição de envio de notificação. Veja <see cref="T:ClickSign.NetCore.Models.NotificationRequest" />.</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <returns>Tarefa assíncrona.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.CreateHooks(ClickSign.NetCore.Models.HooksRequest)">
+            <summary>
+            Método que efetua o cadastro de um hook.
+            </summary>
+            <param name="request">Dados do hook. Veja <see cref="T:ClickSign.NetCore.Models.HooksRequest" />.</param>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.CreateHooksAsync(ClickSign.NetCore.Models.HooksRequest,System.Threading.CancellationToken)">
+            <summary>
+            Método que efetua o cadastro de um hook de forma assíncrona.
+            </summary>
+            <param name="request">Dados do hook. Veja <see cref="T:ClickSign.NetCore.Models.HooksRequest" />.</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <returns>Tarefa assíncrona.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.GetHooks">
+            <summary>
+            Método que consulta o cadastro de um hook.
+            </summary>
+            <returns>Lista contendo os dados de todos os webhooks.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.GetHooksAsync(System.Threading.CancellationToken)">
+            <summary>
+            Método que consulta o cadastro de um hook de forma assíncrona.
+            </summary>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <returns>Lista contendo os dados de todos os webhooks.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.GetAccount">
+            <summary>
+            Método que de consulta o cadastro da conta.
+            </summary>
+            <returns>Dados da conta.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.GetAccountAsync(System.Threading.CancellationToken)">
+            <summary>
+            Método que de consulta o cadastro da conta de forma assíncrona.
+            </summary>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <returns>Dados da conta.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.CreateBatch(ClickSign.NetCore.Models.BatchRequest)">
+            <summary>
+            Método que cria uma assinatura em lotes de documentos com um assinante em comum.
+            </summary>
+            <param name="request">Dados da requisição de criação da assinatura em lotes. Veja <see cref="T:ClickSign.NetCore.Models.BatchRequest" /></param>
+            <returns>Dados da assinatura em lotes criada. Veja <see cref="T:ClickSign.NetCore.Models.BatchResponse" />.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignClient.CreateBatchAsync(ClickSign.NetCore.Models.BatchRequest,System.Threading.CancellationToken)">
+            <summary>
+            Método que cria uma assinatura em lotes de documentos com um assinante em comum de forma assíncrona.
+            </summary>
+            <param name="request">Dados da requisição de criação da assinatura em lotes. Veja <see cref="T:ClickSign.NetCore.Models.BatchRequest" />.</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <returns>Dados da assinatura em lotes criada. Veja <see cref="T:ClickSign.NetCore.Models.BatchResponse" />.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.ClickSignConstants">
+            <summary>
+            Classe de constantes da biblioteca.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.ClickSignConstants.SANDBOX_BASE_URL">
+            <summary>
+            URL padrão do serviço de sandbox.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.ClickSignConstants.PRODUCTION_BASE_URL">
+            <summary>
+            Url padrão do serviço de produção.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.ClickSignConstants.GetBaseUri(ClickSign.NetCore.Enumerators.ApiEnvironment)">
+            <summary>
+            Método que traz a url correta de acordo com a versão e ambiente definidos.
+            </summary>
+            <param name="environment">Ambiente de execução. <see cref="T:ClickSign.NetCore.Enumerators.ApiEnvironment" /></param>
+            <returns></returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Converters.AuthTypesConverter">
+            <summary>
+            Classe para conversão do enumerador <see cref="T:ClickSign.NetCore.Enumerators.AuthType" /> para json e vice-versa.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Converters.AuthTypesConverter.CanConvert(System.Type)">
+            <summary>
+            Método que valida se o tipo informado pode ser convertido.
+            </summary>
+            <param name="objectType">Tipo do objeto à ser convertido.</param>
+            <returns>Verdadeiro caso o objeto possa ser convertido e falso caso contrário.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.Converters.AuthTypesConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Método que transforma o valor json no objeto referente.
+            </summary>
+            <param name="reader">Leitor do arquivo json.</param>
+            <param name="objectType">tipo do objeto à ser convertido.</param>
+            <param name="existingValue">Valor existente.</param>
+            <param name="serializer">Serializador json.</param>
+            <returns>Objeto referente ao valor informado.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.Converters.AuthTypesConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Método que transforma o objeto em sua representação json referente.
+            </summary>
+            <param name="writer">Escritor do arquivo json.</param>
+            <param name="value">Objeto à ser traduzido.</param>
+            <param name="serializer">Serializador json.</param>
+        </member>
+        <member name="T:ClickSign.NetCore.Converters.DateFormatConverter">
+            <summary>
+            Classe responsável pela conversão da data para um formato específico.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Converters.DateFormatConverter.#ctor(System.String)">
+            <summary>
+            Método construtor.
+            </summary>
+            <param name="format">Formado de data desejado.</param>
+        </member>
+        <member name="T:ClickSign.NetCore.Converters.DeliveryTypeConverter">
+            <summary>
+            Classe para conversão do enumerador <see cref="T:ClickSign.NetCore.Enumerators.DeliveryType" /> para json e vice-versa.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Converters.DeliveryTypeConverter.CanConvert(System.Type)">
+            <summary>
+            Método que valida se o tipo informado pode ser convertido.
+            </summary>
+            <param name="objectType">Tipo do objeto à ser convertido.</param>
+            <returns>Verdadeiro caso o objeto possa ser convertido e falso caso contrário.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.Converters.DeliveryTypeConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Método que transforma o valor json no objeto referente.
+            </summary>
+            <param name="reader">Leitor do arquivo json.</param>
+            <param name="objectType">tipo do objeto à ser convertido.</param>
+            <param name="existingValue">Valor existente.</param>
+            <param name="serializer">Serializador json.</param>
+            <returns>Objeto referente ao valor informado.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.Converters.DeliveryTypeConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Método que transforma o objeto em sua representação json referente.
+            </summary>
+            <param name="writer">Escritor do arquivo json.</param>
+            <param name="value">Objeto à ser traduzido.</param>
+            <param name="serializer">Serializador json.</param>
+        </member>
+        <member name="T:ClickSign.NetCore.Converters.DocumentStatusConverter">
+            <summary>
+            Classe para conversão do enumerador <see cref="T:ClickSign.NetCore.Enumerators.DocumentStatus" /> para json e vice-versa.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Converters.DocumentStatusConverter.CanConvert(System.Type)">
+            <summary>
+            Método que valida se o tipo informado pode ser convertido.
+            </summary>
+            <param name="objectType">Tipo do objeto à ser convertido.</param>
+            <returns>Verdadeiro caso o objeto possa ser convertido e falso caso contrário.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.Converters.DocumentStatusConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Método que transforma o valor json no objeto referente.
+            </summary>
+            <param name="reader">Leitor do arquivo json.</param>
+            <param name="objectType">tipo do objeto à ser convertido.</param>
+            <param name="existingValue">Valor existente.</param>
+            <param name="serializer">Serializador json.</param>
+            <returns>Objeto referente ao valor informado.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.Converters.DocumentStatusConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Método que transforma o objeto em sua representação json referente.
+            </summary>
+            <param name="writer">Escritor do arquivo json.</param>
+            <param name="value">Objeto à ser traduzido.</param>
+            <param name="serializer">Serializador json.</param>
+        </member>
+        <member name="T:ClickSign.NetCore.Converters.EventTypeConverter">
+            <summary>
+            Classe para conversão do enumerador <see cref="T:ClickSign.NetCore.Enumerators.EventType" /> para json e vice-versa.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Converters.EventTypeConverter.CanConvert(System.Type)">
+            <summary>
+            Método que valida se o tipo informado pode ser convertido.
+            </summary>
+            <param name="objectType">Tipo do objeto à ser convertido.</param>
+            <returns>Verdadeiro caso o objeto possa ser convertido e falso caso contrário.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.Converters.EventTypeConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Método que transforma o valor json no objeto referente.
+            </summary>
+            <param name="reader">Leitor do arquivo json.</param>
+            <param name="objectType">tipo do objeto à ser convertido.</param>
+            <param name="existingValue">Valor existente.</param>
+            <param name="serializer">Serializador json.</param>
+            <returns>Objeto referente ao valor informado.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.Converters.EventTypeConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Método que transforma o objeto em sua representação json referente.
+            </summary>
+            <param name="writer">Escritor do arquivo json.</param>
+            <param name="value">Objeto à ser traduzido.</param>
+            <param name="serializer">Serializador json.</param>
+        </member>
+        <member name="T:ClickSign.NetCore.Converters.LocalesConverter">
+            <summary>
+            Classe para conversão do enumerador <see cref="T:ClickSign.NetCore.Enumerators.Locales" /> para json e vice-versa.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Converters.LocalesConverter.CanConvert(System.Type)">
+            <summary>
+            Método que valida se o tipo informado pode ser convertido.
+            </summary>
+            <param name="objectType">Tipo do objeto à ser convertido.</param>
+            <returns>Verdadeiro caso o objeto possa ser convertido e falso caso contrário.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.Converters.LocalesConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Método que transforma o valor json no objeto referente.
+            </summary>
+            <param name="reader">Leitor do arquivo json.</param>
+            <param name="objectType">tipo do objeto à ser convertido.</param>
+            <param name="existingValue">Valor existente.</param>
+            <param name="serializer">Serializador json.</param>
+            <returns>Objeto referente ao valor informado.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.Converters.LocalesConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Método que transforma o objeto em sua representação json referente.
+            </summary>
+            <param name="writer">Escritor do arquivo json.</param>
+            <param name="value">Objeto à ser traduzido.</param>
+            <param name="serializer">Serializador json.</param>
+        </member>
+        <member name="T:ClickSign.NetCore.Converters.SignatureValidationConverter">
+            <summary>
+            Classe para conversão do enumerador <see cref="T:ClickSign.NetCore.Enumerators.SignatureValidationStatus" /> para json e vice-versa.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Converters.SignatureValidationConverter.CanConvert(System.Type)">
+            <summary>
+            Método que valida se o tipo informado pode ser convertido.
+            </summary>
+            <param name="objectType">Tipo do objeto à ser convertido.</param>
+            <returns>Verdadeiro caso o objeto possa ser convertido e falso caso contrário.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.Converters.SignatureValidationConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Método que transforma o valor json no objeto referente.
+            </summary>
+            <param name="reader">Leitor do arquivo json.</param>
+            <param name="objectType">tipo do objeto à ser convertido.</param>
+            <param name="existingValue">Valor existente.</param>
+            <param name="serializer">Serializador json.</param>
+            <returns>Objeto referente ao valor informado.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.Converters.SignatureValidationConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Método que transforma o objeto em sua representação json referente.
+            </summary>
+            <param name="writer">Escritor do arquivo json.</param>
+            <param name="value">Objeto à ser traduzido.</param>
+            <param name="serializer">Serializador json.</param>
+        </member>
+        <member name="T:ClickSign.NetCore.Converters.SignTypeConverter">
+            <summary>
+            Classe para conversão do enumerador <see cref="T:ClickSign.NetCore.Enumerators.SignType" /> para json e vice-versa.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Converters.SignTypeConverter.CanConvert(System.Type)">
+            <summary>
+            Método que valida se o tipo informado pode ser convertido.
+            </summary>
+            <param name="objectType">Tipo do objeto à ser convertido.</param>
+            <returns>Verdadeiro caso o objeto possa ser convertido e falso caso contrário.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.Converters.SignTypeConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Método que transforma o valor json no objeto referente.
+            </summary>
+            <param name="reader">Leitor do arquivo json.</param>
+            <param name="objectType">tipo do objeto à ser convertido.</param>
+            <param name="existingValue">Valor existente.</param>
+            <param name="serializer">Serializador json.</param>
+            <returns>Objeto referente ao valor informado.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.Converters.SignTypeConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Método que transforma o objeto em sua representação json referente.
+            </summary>
+            <param name="writer">Escritor do arquivo json.</param>
+            <param name="value">Objeto à ser traduzido.</param>
+            <param name="serializer">Serializador json.</param>
+        </member>
+        <member name="T:ClickSign.NetCore.Enumerators.ApiEnvironment">
+            <summary>
+            Enumerador com os tipos de ambiente disponíveis no serviço.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.ApiEnvironment.Sandbox">
+            <summary>
+            Ambiente de testes e/ou desenvolvimento.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.ApiEnvironment.Production">
+            <summary>
+            Ambiente de produção.
+            </summary>
+        </member>
+        <member name="T:ClickSign.NetCore.Enumerators.ApiVersion">
+            <summary>
+            Enumerador com as versões disponíveis no serviço.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.ApiVersion.V1">
+            <summary>
+            Versão 1.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.ApiVersion.V2">
+            <summary>
+            Versão 2.
+            </summary>
+        </member>
+        <member name="T:ClickSign.NetCore.Enumerators.AuthType">
+            <summary>
+            Enumerador com os tipos de autenticação disponíveis no serviço.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.AuthType.Email">
+            <summary>
+            Envio de token por e-mail
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.AuthType.Sms">
+            <summary>
+            Envio de token por SMS
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.AuthType.WhatsApp">
+            <summary>
+            Envio de token por Whatsapp
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.AuthType.Api">
+            <summary>
+            Assinatura via API
+            </summary>
+        </member>
+        <member name="T:ClickSign.NetCore.Enumerators.DeliveryType">
+            <summary>
+            Enumerador com os tipos de notificação de assinatura disponíveis no serviço.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.DeliveryType.None">
+            <summary>
+            Não receberá confirmação de assinatura
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.DeliveryType.Email">
+            <summary>
+            Receberá confirmação de assinatura por email
+            </summary>
+        </member>
+        <member name="T:ClickSign.NetCore.Enumerators.DocumentStatus">
+            <summary>
+            Enumerador com os status possíveis de um documento no serviço.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.DocumentStatus.Running">
+            <summary>
+            Documento em processo de assinatura
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.DocumentStatus.Closed">
+            <summary>
+            Documento finalizado
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.DocumentStatus.Cancelled">
+            <summary>
+            Documento cancelado
+            </summary>
+        </member>
+        <member name="T:ClickSign.NetCore.Enumerators.EventType">
+            <summary>
+            Enumerador com os tipos de eventos que podem ocorrer.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.EventType.Unknow">
+            <summary>
+            Ocorre quando o evento é desconhecido.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.EventType.Upload">
+            <summary>
+            Ocorre quando é realizado o upload de um documento.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.EventType.AddSigner">
+            <summary>
+            Ocorre quando são adicionados signatários a um documento.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.EventType.RemoveSigner">
+            <summary>
+            Ocorre quando são removidos signatários de um documento.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.EventType.Sign">
+            <summary>
+            Ocorre quando um signatário assina um documento.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.EventType.Close">
+            <summary>
+            Ocorre quando um documento é finalizado manualmente.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.EventType.AutoClose">
+            <summary>
+            Ocorre quando um documento é finalizado automaticamente logo após a última assinatura.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.EventType.Deadline">
+            <summary>
+            Ocorre quando a data limite de assinatura de um documento for atingida. Se o documento contiver ao menos uma
+            assinatura, ele é finalizado. Caso contrário, o documento é cancelado.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.EventType.Cancel">
+            <summary>
+            Ocorre quando um documento é cancelado manualmente.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.EventType.UpdateDeadline">
+            <summary>
+            Ocorre quando a data limite de assinatura de um documento é alterada.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.EventType.UpdateAutoClose">
+            <summary>
+            Ocorre quando a opção de finalização automática de um documento é alterada.
+            </summary>
+        </member>
+        <member name="T:ClickSign.NetCore.Enumerators.Locales">
+            <summary>
+            Enumerador com os idiomas disponíveis no serviço.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.Locales.PtBR">
+            <summary>
+            Português (Brasil).
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.Locales.EnUS">
+            <summary>
+            Inglês
+            </summary>
+        </member>
+        <member name="T:ClickSign.NetCore.Enumerators.NotificationType">
+            <summary>
+            Enumerador com os tipos de envio de chave de assinatura do serviço.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.NotificationType.Email">
+            <summary>
+            Envio por e-mail.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.NotificationType.Sms">
+            <summary>
+            Envio por sms.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.NotificationType.Whatsapp">
+            <summary>
+            Envio por Whatsapp.
+            </summary>
+        </member>
+        <member name="T:ClickSign.NetCore.Enumerators.SignatureValidationStatus">
+            <summary>
+            Enumerador com os tipos de status de validação.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignatureValidationStatus.Unknow">
+            <summary>
+            Desconhecido.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignatureValidationStatus.Pending">
+            <summary>
+            Aguardando validação na base da Receita Federal.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignatureValidationStatus.Conferred">
+            <summary>
+            Nome confere com a base de dados da Receita Federal.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignatureValidationStatus.CpfNotFound">
+            <summary>
+            CPF informado não existe na base de dados da Receita Federal.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignatureValidationStatus.DivergentName">
+            <summary>
+            Nome preenchido diverge do nome cadastrado na base de dados da Receita Federal
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignatureValidationStatus.DivergentBirthday">
+            <summary>
+            Data de nascimento preenchida diverge da data cadastrada na base de dados da Receita Federal.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignatureValidationStatus.CpfInvalid">
+            <summary>
+            CPF informado não é válido.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignatureValidationStatus.SignerValidationFail">
+            <summary>
+            Validação do signatário apresentou erro ocorrido durante a consulta na base de dados da Receita Federal.
+            </summary>
+        </member>
+        <member name="T:ClickSign.NetCore.Enumerators.SignType">
+            <summary>
+            Enumerador com os tipos de assinatura disponíveis no serviço.
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignType.Sign">
+            <summary>
+            Assinante
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignType.Approve">
+            <summary>
+            Assinar para aprovar
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignType.Party">
+            <summary>
+            Assinar como parte
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignType.Witness">
+            <summary>
+            Assinar como testemunha
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignType.Interventing">
+            <summary>
+            Assinar como interveniente
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignType.Receipt">
+            <summary>
+            Assinar para acusar recebimento
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignType.Endorser">
+            <summary>
+            Assinar como endorssante
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignType.Endorsee">
+            <summary>
+            Assinar como endorssattário
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignType.Administrator">
+            <summary>
+            Assinar como administrador
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignType.Guarantor">
+            <summary>
+            Assinar como avalista
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignType.Transferor">
+            <summary>
+            Assinar como cedente
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignType.Transferee">
+            <summary>
+            Assinar como cessionário
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignType.Contractor">
+            <summary>
+            Assinar como contratante
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignType.Contractee">
+            <summary>
+            Assinar como contratada
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignType.JointDebtor">
+            <summary>
+            Assinar como devedor solidário
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignType.Issuer">
+            <summary>
+            Assinar como emitente
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignType.Manager">
+            <summary>
+            Assinar como gestor
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignType.Buyer">
+            <summary>
+            Assinar como compradora
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignType.Seller">
+            <summary>
+            Assinar como vendedora
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignType.Attorney">
+            <summary>
+            Assinar como procurador
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignType.LegalRepresentative">
+            <summary>
+            Assinar como representante legal
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignType.CoResponsible">
+            <summary>
+            Assinar como responsável solidário
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCore.Enumerators.SignType.Validator">
+            <summary>
+            Assinar como validador
+            </summary>
+        </member>
+        <member name="T:ClickSign.NetCore.Exceptions.ClickSignException">
+            <summary>
+            Classe de exceção básica da biblioteca.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Exceptions.ClickSignException.#ctor">
+            <summary>
+            Método construtor.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Exceptions.ClickSignException.#ctor(System.String)">
+            <summary>
+            Método construtor.
+            </summary>
+            <param name="message">Mensagem à ser definida na excessão.</param>
+        </member>
+        <member name="M:ClickSign.NetCore.Exceptions.ClickSignException.#ctor(System.Exception)">
+            <summary>
+            Método construtor.
+            </summary>
+            <param name="innerException">Excessão que causou a falha.</param>
+        </member>
+        <member name="M:ClickSign.NetCore.Exceptions.ClickSignException.#ctor(System.String,System.Exception)">
+            <summary>
+            Método construtor.
+            </summary>
+            <param name="message">Mensagem à ser definida na excessão.</param>
+            <param name="innerException">Excessão que causou a falha.</param>
+        </member>
+        <member name="T:ClickSign.NetCore.Exceptions.ClickSignErrors">
+            <summary>
+            Classe container de mensagens de erro reportadas pelo serviço.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Exceptions.ClickSignErrors.#ctor">
+            <summary>
+            Método construtor.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Exceptions.ClickSignErrors.Errors">
+            <summary>
+            Lista de erros reportados pelo serviço.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Exceptions.ClickSignErrors.ToString">
+            <summary>
+            Método que transforma o objeto em sua representação textual (string).
+            </summary>
+            <returns>Representação textual do objeto.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Exceptions.ClickSignRequestException">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Exceptions.ClickSignRequestException.#ctor">
+            <summary>
+            Método construtor.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Exceptions.ClickSignRequestException.#ctor(System.String)">
+            <summary>
+            Método construtor.
+            </summary>
+            <param name="message">Mensagem à ser definida na excessão.</param>
+        </member>
+        <member name="M:ClickSign.NetCore.Exceptions.ClickSignRequestException.#ctor(System.Exception)">
+            <summary>
+            Método construtor.
+            </summary>
+            <param name="innerException">Excessão que causou a falha.</param>
+        </member>
+        <member name="M:ClickSign.NetCore.Exceptions.ClickSignRequestException.#ctor(System.String,System.Exception)">
+            <summary>
+            Método construtor.
+            </summary>
+            <param name="message">Mensagem à ser definida na excessão.</param>
+            <param name="innerException">Excessão que causou a falha.</param>
+        </member>
+        <member name="P:ClickSign.NetCore.Exceptions.ClickSignRequestException.Errors">
+            <summary>
+            Erros reportados pelo serviço.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Exceptions.ClickSignRequestException.GetClickSignErrors(System.String)">
+            <summary>
+            Método estático que transforma a mensagem retornada pelo serviço em uma
+            lista de excessões. Caso não possa ser convertido, será exibida a mensagem de erro padrão.
+            </summary>
+            <param name="message">Mensagem de excessão.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ClickSign.NetCore.Exceptions.ClickSignRequestException.ToString">
+            <summary>
+            Método que transforma o objeto em sua representação textual (string).
+            </summary>
+            <returns>Representação textual do objeto.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Exceptions.HttpException">
+            <summary>
+            Classe de exceção de requisições HTTP.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Exceptions.HttpException.#ctor(System.Uri,System.String,System.String,System.Net.Http.Headers.HttpRequestHeaders,System.String,System.Net.HttpStatusCode,System.Net.Http.Headers.HttpResponseHeaders,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickSign.NetCore.Exceptions.HttpException" /> class.
+            </summary>
+            <param name="uri">The URL.</param>
+            <param name="verb">The verb.</param>
+            <param name="reasonPhrase">The reason phrase.</param>
+            <param name="headers">The headers of the request.</param>
+            <param name="content">The content.</param>
+            <param name="statusCode">The status code.</param>
+            <param name="responseHeaders">The headers of response.</param>
+            <param name="ex">The ex.</param>
+        </member>
+        <member name="P:ClickSign.NetCore.Exceptions.HttpException.Verb">
+            <summary>
+            Gets the verb.
+            </summary>
+            <value>
+            The verb.
+            </value>
+        </member>
+        <member name="P:ClickSign.NetCore.Exceptions.HttpException.Headers">
+            <summary>
+            Gets the headers of sended request.
+            </summary>
+            <value>
+            The verb.
+            </value>
+        </member>
+        <member name="P:ClickSign.NetCore.Exceptions.HttpException.ReasonPhrase">
+            <summary>
+            Gets the reason phrase.
+            </summary>
+            <value>
+            The reason phrase.
+            </value>
+        </member>
+        <member name="P:ClickSign.NetCore.Exceptions.HttpException.Uri">
+            <summary>
+            Gets the Uri.
+            </summary>
+            <value>
+            The URL.
+            </value>
+        </member>
+        <member name="P:ClickSign.NetCore.Exceptions.HttpException.Content">
+            <summary>
+            Gets the content.
+            </summary>
+            <value>
+            The content.
+            </value>
+        </member>
+        <member name="P:ClickSign.NetCore.Exceptions.HttpException.ResponseHeaders">
+            <summary>
+            Gets the response headers of sended request.
+            </summary>
+            <value>
+            The verb.
+            </value>
+        </member>
+        <member name="P:ClickSign.NetCore.Exceptions.HttpException.StatusCode">
+            <summary>
+            Gets the status code.
+            </summary>
+            <value>
+            The status code.
+            </value>
+        </member>
+        <member name="T:ClickSign.NetCore.Exceptions.WebhookUnauthorizedException">
+            <summary>
+            Exceção ligada à não autorização do webhook.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Exceptions.WebhookUnauthorizedException.#ctor">
+            <summary>
+            Método construtor.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Exceptions.WebhookUnauthorizedException.#ctor(System.String)">
+            <summary>
+            Método construtor.
+            </summary>
+            <param name="message">Mensagem à ser definida na excessão.</param>
+        </member>
+        <member name="M:ClickSign.NetCore.Exceptions.WebhookUnauthorizedException.#ctor(System.Exception)">
+            <summary>
+            Método construtor.
+            </summary>
+            <param name="innerException">Excessão que causou a falha.</param>
+        </member>
+        <member name="M:ClickSign.NetCore.Exceptions.WebhookUnauthorizedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Método construtor.
+            </summary>
+            <param name="message">Mensagem à ser definida na excessão.</param>
+            <param name="innerException">Excessão que causou a falha.</param>
+        </member>
+        <member name="T:ClickSign.NetCore.Extensions.StreamExtensions">
+            <summary>
+            Classe de extensões para <see cref="T:System.IO.Stream" />.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Extensions.StreamExtensions.ToByteArray(System.IO.Stream)">
+            <summary>
+            Método de extensão para converter um <see cref="T:System.IO.Stream" /> em um vetor de bytes.
+            </summary>
+            <param name="stream">Instância do stream à ser convertido.</param>
+            <returns>Vetor de bytes relativo ao stream de bytes informado.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Extensions.UploadRequestExtensions">
+            <summary>
+            Classe de extensões para <see cref="T:ClickSign.NetCore.Models.UploadRequest" />.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Extensions.UploadRequestExtensions.SetContent(ClickSign.NetCore.Models.UploadRequest,System.String)">
+            <summary>
+            Método que define o conteúdo da requisição com base no endereço de um arquivo.
+            </summary>
+            <param name="request">Instância do objeto.</param>
+            <param name="path">Nome do arquivo completo para adição à requisição.</param>
+            <returns>Instância do objeto.</returns>
+        </member>
+        <member name="M:ClickSign.NetCore.Extensions.UploadRequestExtensions.SetContent(ClickSign.NetCore.Models.UploadRequest,System.IO.Stream)">
+            <summary>
+            Método que define o conteúdo da requisição com base no fluxo de dados de um arquivo.
+            </summary>
+            <param name="request">Instância do objeto.</param>
+            <param name="stream">Fluxo de dados à ser adicionado à requisição.</param>
+            <returns>Instância do objeto.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.Account">
+            <summary>
+            Classe que representa uma conta.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Account.Name">
+            <summary>
+            Nome da conta
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Account.Key">
+            <summary>
+            Chave da conta
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Account.Admins">
+            <summary>
+            Emails dos administradores da conta
+            </summary>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.AddSignerRequest">
+            <summary>
+            Classe de modelo de requisição de adição de um assinante à um documento.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.AddSignerRequest.#ctor">
+            <summary>
+            Método construtor.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.AddSignerRequest.DocumentKey">
+            <summary>
+            Chave única do documento dentro da Clicksign.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.AddSignerRequest.SignerKey">
+            <summary>
+            Chave única do signatário dentro da Clicksign.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.AddSignerRequest.SignAs">
+            <summary>
+            A que título será realizada a assinatura. Veja <see cref="T:ClickSign.NetCore.Enumerators.SignType" />.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.AddSignerRequest.Group">
+            <summary>
+            Determina o grupo que o signatário deve ser vinculado.
+            O parâmetro funciona com sequence_enabled como true.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.AddSignerRequest.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.AddSignerResponse">
+            <summary>
+            Classe de modelo de resposta de adição de um assinante à um documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.AddSignerResponse.Key">
+            <summary>
+            Chave da associação do assinante ao documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.AddSignerResponse.SignatureKey">
+            <summary>
+            Chave de requisição de assinatura.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.AddSignerResponse.DocumentKey">
+            <summary>
+            Chave de do documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.AddSignerResponse.SignerKey">
+            <summary>
+            Chave do assinante.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.AddSignerResponse.SignAs">
+            <summary>
+            Atributo que define o tipo de assinatura que o assinante fará ao documento. <see cref="T:ClickSign.NetCore.Enumerators.SignType" />
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.AddSignerResponse.Created">
+            <summary>
+            Data de criação da associação de assinatura.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.AddSignerResponse.Updated">
+            <summary>
+            Data de atualização da associação de assinatura.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.AddSignerResponse.Url">
+            <summary>
+            Url de assinatura do documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.AddSignerResponse.Group">
+            <summary>
+            Determina o grupo que o signatário deve ser vinculado.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.AddSignerResponse.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.BatchRequest">
+            <summary>
+            Classe de modelo de requisição de criação de assinatura em lotes.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.BatchRequest.#ctor">
+            <summary>
+            Método construtor.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.BatchRequest.SignerKey">
+            <summary>
+            Chave única do signatário dentro da Clicksign.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.BatchRequest.DocumentKeys">
+            <summary>
+            Lista de chaves dos documentos que farão parte da assinatura em lotes.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.BatchRequest.Summary">
+            <summary>
+            Atributo que indica se será apresentado um sumário com todos os documentos
+            à serem assinados. Caso verdadeiro, o sumário será apresentado e todos os
+            documentos serão assinados de uma única vez, do contrário serão assinados em
+            sequência.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.BatchRequest.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.BatchResponse">
+            <summary>
+            Classe de modelo de resposta de criação de assinatura em lotes.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.BatchResponse.#ctor">
+            <summary>
+            Método construtor.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.BatchResponse.Key">
+            <summary>
+            Chave única da assinatura em lotes.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.BatchResponse.SignerKey">
+            <summary>
+            Chave do assinante que fará a assinatura em lote.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.BatchResponse.DocumentKeys">
+            <summary>
+            Lista de chaves dos documentos que farão parte da assinatura em lotes.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.BatchResponse.Summary">
+            <summary>
+            Atributo que indica se será apresentado um sumário com todos os documentos
+            à serem assinados. Caso verdadeiro, o sumário será apresentado e todos os
+            documentos serão assinados de uma única vez, do contrário serão assinados em
+            sequência.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.BatchResponse.Created">
+            <summary>
+            Data de criação da assinatura em lotes.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.BatchResponse.Updated">
+            <summary>
+            Data de atualização da assinatura em lotes.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.BatchResponse.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.CreateSignerRequest">
+            <summary>
+            Classe de modelo de requisição de criação de assinante.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.CreateSignerRequest.#ctor">
+            <summary>
+            Método construtor.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.CreateSignerRequest.Name">
+            <summary>
+            Nome do assinante.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.CreateSignerRequest.Email">
+            <summary>
+            Endereço de email do assinante.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.CreateSignerRequest.HasDocumentation">
+            <summary>
+            Indica se o assinante possui documento associado.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.CreateSignerRequest.Documentation">
+            <summary>
+            Número do documento do assinante.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.CreateSignerRequest.Birthday">
+            <summary>
+            Data de aniversário do assinante.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.CreateSignerRequest.Phone">
+            <summary>
+            Número de telefone do assinante.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.CreateSignerRequest.Auths">
+            <summary>
+            Tipo de autenticação à ser utilizada pelo assinante.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.CreateSignerRequest.SetAuth(ClickSign.NetCore.Enumerators.AuthType)">
+            <summary>
+            Método para definir o tipo de autenticação do assinante.
+            </summary>
+            <param name="authType">Tipo de autenticação à ser utilizada pelo assinante.</param>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.CreateSignerRequest.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.Document">
+            <summary>
+            Classe que representa um documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Document.Key">
+            <summary>
+            Chave única do documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Document.Path">
+            <summary>
+            Caminho do documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Document.Filename">
+            <summary>
+            Nome do arquivo.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Document.Uploaded">
+            <summary>
+            Data de upload do documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Document.Updated">
+            <summary>
+            Data de atualização do documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Document.Finished">
+            <summary>
+            Data de finalização do documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Document.Deadline">
+            <summary>
+            Data limite de assinaturas do documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Document.Status">
+            <summary>
+            Estado atual do documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Document.AutoClose">
+            <summary>
+            Atributo que indica se o documento será finalizado após a última assinatura automaticamente.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Document.Locale">
+            <summary>
+            Atributo que define o idioma desejado para o documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Document.Downloads">
+            <summary>
+            Atributo que contém os dados de download do documento. <see cref="T:ClickSign.NetCore.Models.Download" />
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Document.Signers">
+            <summary>
+            Lista contendo os assinantes do documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Document.Events">
+            <summary>
+            Lista contendo os eventos do documento.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.Document.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.DocumentSigner">
+            <summary>
+            Classe de modelo que representa um assinante de um documento.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.DocumentSigner.#ctor">
+            <summary>
+            Método construtor.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.DocumentSigner.ListKey">
+            <summary>
+            Id da associação do assinante ao documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.DocumentSigner.RequestSignatureKey">
+            <summary>
+            Id da requisição de assinatura.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.DocumentSigner.SignAs">
+            <summary>
+            Tipo de assinatura do assinante ao documento. Veja <see cref="T:ClickSign.NetCore.Enumerators.SignType" />.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.DocumentSigner.Delivery">
+            <summary>
+            Tipo de envio de notificação de assinatura ao assinante.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.DocumentSigner.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.Download">
+            <summary>
+            Classe que representa as urls de download de um documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Download.OriginalUrl">
+            <summary>
+            Endereço de download do arquivo original.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Download.SignedUrl">
+            <summary>
+            Endereço de download do arquivo assinado.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Download.ZippedUrl">
+            <summary>
+            endereço de download do arquivo .zip contendo o arquivo original e o assinado.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.Download.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.Event">
+            <summary>
+            Classe que representa um evento recebido.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Event.Name">
+            <summary>
+            Nome do evento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Event.Occurred">
+            <summary>
+            Data em que o evento ocorreu.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Event.Data">
+            <summary>
+            Dados do evento ocorrido. <see cref="T:ClickSign.NetCore.Models.EventData" />
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.Event.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.EventData">
+            <summary>
+            Classe que representa os dados de um evento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.EventData.User">
+            <summary>
+            Dados do usuário do sistema.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.EventData.Account">
+            <summary>
+            Dados da conta do sistema.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.EventData.Signer">
+            <summary>
+            Dados do assinante.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.EventData.LogVersion">
+            <summary>
+            Dados de versão do log.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.EventData.AutoClose">
+            <summary>
+            Indica que o documento será fechado após a assinatura de todos os assinantes.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.EventData.Deadline">
+            <summary>
+            Data limite para assinaturas ao documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.EventData.Signers">
+            <summary>
+            Lista contendo assinantes.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.EventData.Locale">
+            <summary>
+            Localização do documento.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.EventData.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.EventAccount">
+            <summary>
+            Evento da conta.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.EventAccount.Key">
+            <summary>
+            Id da conta.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.EventAccount.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.EventSigner">
+            <summary>
+            Evento do assinante.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.EventSigner.Key">
+            <summary>
+            Id do assinante.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.EventSigner.Name">
+            <summary>
+            Nome do assinante.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.EventSigner.Documentation">
+            <summary>
+            Número do documento do assinante.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.EventSigner.Birthday">
+            <summary>
+            Data de nascimento do assinante.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.EventSigner.Address">
+            <summary>
+            Endereço do assinante.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.EventSigner.Email">
+            <summary>
+            Email do assinante.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.EventSigner.HasDocumentation">
+            <summary>
+            Indica se o assinate possui documentação.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.EventSigner.Creation">
+            <summary>
+            Data de criação do assinante.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.EventSigner.SignAs">
+            <summary>
+            A que título será realizada a assinatura. Veja <see cref="T:ClickSign.NetCore.Enumerators.SignType" />.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.EventSigner.Auths">
+            <summary>
+            Método de autenticação do assinante.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.EventSigner.Url">
+            <summary>
+            Url de assinatura do documento.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.EventSigner.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.EventUser">
+            <summary>
+            Evento do usuário.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.EventUser.Name">
+            <summary>
+            Nome do usuário do sistema.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.EventUser.Email">
+            <summary>
+            Email do usuário do sistema.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.EventUser.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.HooksRequest">
+            <summary>
+            Classe que representa um hook.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.HooksRequest.Url">
+            <summary>
+            URL para recebimentos dos eventos de webhooks.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.HooksRequest.Secret">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.HooksRequest.Events">
+            <summary>
+            Definição dos eventos deverão ser retornados ao endpoint específico.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.HooksRequest.Status">
+            <summary>
+            Definição do status
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.HooksRequest.Key">
+            <summary>
+            Chave do webhook.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.HooksRequest.Created">
+            <summary>
+            Data de criação do hook.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.HooksRequest.Updated">
+            <summary>
+            Data de atualização do hook.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.HooksRequest.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.HooksResponse">
+            <summary>
+            Classe que representa um disparo de hook.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.HooksResponse.Event">
+            <summary>
+            Evento recebido
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.HooksResponse.Acceptance">
+            <summary>
+            Dados enviados
+            </summary>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.Data">
+            <summary>
+            Dados do evento
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Data.User">
+            <summary>
+            Usuario da conta associada
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Data.Account">
+            <summary>
+            Conta associada
+            </summary>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.User">
+            <summary>
+            Classe que representa um usuário.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.User.Email">
+            <summary>
+            Email do usuário
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.User.Name">
+            <summary>
+            Nome do usuário
+            </summary>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.Acceptance">
+            <summary>
+            Classe que representa os dados enviados.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Acceptance.Key">
+            <summary>
+            Chave
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Acceptance.Name">
+            <summary>
+            Descrição do envio
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Acceptance.SenderName">
+            <summary>
+            Nome do responsável do envio
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Acceptance.SenderPhone">
+            <summary>
+            Telefone do responsável do envio
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Acceptance.Content">
+            <summary>
+            Conteudo do envio
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Acceptance.Status">
+            <summary>
+            Status do envio
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Acceptance.SignerPhone">
+            <summary>
+            Telefone do signatário
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Acceptance.SignerName">
+            <summary>
+            Nome do signatário
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Acceptance.Sent">
+            <summary>
+            Data do envio
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Acceptance.Created">
+            <summary>
+            Data da criação
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Acceptance.Messages">
+            <summary>
+            Lista de mensagens enviadas
+            </summary>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.Messages">
+            <summary>
+            Classe que representa as mensagens enviadas.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Messages.MessageId">
+            <summary>
+            Id da mensagem
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Messages.Message">
+            <summary>
+            Descrição da mensagem
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Messages.ProfileName">
+            <summary>
+            Nome do destinatário da mensagem
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Messages.ErrorMessage">
+            <summary>
+            Mensagem de erro
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Messages.Direction">
+            <summary>
+            Status da mensagem
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Messages.Created">
+            <summary>
+            Data de criação da mensagem
+            </summary>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.InternalAddSignerDocumentRequest">
+            <summary>
+            Classe interna para requisição de adição de um assinante à um documento.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.InternalAddSignerDocumentRequest.#ctor(ClickSign.NetCore.Models.AddSignerRequest)">
+            <summary>
+            Método construtor.
+            </summary>
+            <param name="request">Dados do assinante à ser adicionado à um documento.</param>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.InternalAddSignerDocumentRequest.List">
+            <summary>
+            Dados do assinante à ser adicionado à um documento.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.InternalAddSignerDocumentRequest.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.InternalBatchRequest">
+            <summary>
+            Classe interna para requisição de criação de assinatura em lotes.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.InternalBatchRequest.#ctor(ClickSign.NetCore.Models.BatchRequest)">
+            <summary>
+            Método construtor.
+            </summary>
+            <param name="request">Dados da assinatura em lote à ser criada.</param>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.InternalBatchRequest.Batch">
+            <summary>
+            Dados da assinatura em lote à ser criada.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.InternalBatchRequest.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.InternalCreateSignerRequest">
+            <summary>
+            Classe interna para requisição de criação de assinante.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.InternalCreateSignerRequest.#ctor(ClickSign.NetCore.Models.CreateSignerRequest)">
+            <summary>
+            Método construtor
+            </summary>
+            <param name="request">Dados do assinante à ser criado.</param>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.InternalCreateSignerRequest.Signer">
+            <summary>
+            Dados do assinante à ser criado.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.InternalCreateSignerRequest.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.InternalResponse">
+            <summary>
+            Classe de resposta das requisições ao serviço.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.InternalResponse.Document">
+            <summary>
+            Documento criado ou retornado com base na chave informada.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.InternalResponse.Documents">
+            <summary>
+            Lista de documentos criados ou retornados.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.InternalResponse.Webhooks">
+            <summary>
+            Lista de webhooks criados ou retornados.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.InternalResponse.Signer">
+            <summary>
+            Assinante criado ou retornado com base na chave informada.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.InternalResponse.List">
+            <summary>
+            Dados da associação de um assinante à um documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.InternalResponse.Batch">
+            <summary>
+            Dados de resposta à criação de uma assinatura em lotes.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.InternalResponse.Account">
+            <summary>
+            Dados de resposta de uma conta.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.InternalResponse.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.InternalUploadRequest">
+            <summary>
+            Classe interna para requisição de uplaod de arquivo.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.InternalUploadRequest.#ctor(ClickSign.NetCore.Models.UploadRequest)">
+            <summary>
+            Método construtor.
+            </summary>
+            <param name="request">Dados do documento à ser enviado ao serviço.</param>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.InternalUploadRequest.Document">
+            <summary>
+            Dados do documento à ser enviado ao serviço.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.InternalUploadRequest.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.NotificationRequest">
+            <summary>
+            Classe de modelo de requisição de notificação de assinatura.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.NotificationRequest.#ctor">
+            <summary>
+            Método construtor.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.NotificationRequest.SignatureKey">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.NotificationRequest.Message">
+            <summary>
+            Mensagem à ser enviada ao assinante.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.NotificationRequest.Url">
+            <summary>
+            Url de assinatura.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.NotificationRequest.Type">
+            <summary>
+            Canal de assinatura. Veja <see cref="T:ClickSign.NetCore.Enumerators.NotificationType" />.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.NotificationRequest.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.Signature">
+            <summary>
+            Classe de modelo com os dados de uma assinantura.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Signature.Name">
+            <summary>
+            Nome do assinante.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Signature.Email">
+            <summary>
+            Email do assinante.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Signature.Birthday">
+            <summary>
+            Data de nascimento do assinante.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Signature.Documentation">
+            <summary>
+            Número do documento do assinante.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Signature.IpAddress">
+            <summary>
+            Endereço IP do assinante.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Signature.SignedAt">
+            <summary>
+            Data de assinatura.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Signature.SignAs">
+            <summary>
+            A que título será realizada a assinatura. Veja <see cref="T:ClickSign.NetCore.Enumerators.SignType" />.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Signature.Validation">
+            <summary>
+            Dados de validação do assinante.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.Signature.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.SignatureValidation">
+            <summary>
+            Classe de modelo com os dados da validação de uma assinatura.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.SignatureValidation.Status">
+            <summary>
+            Status da validação.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.SignatureValidation.Name">
+            <summary>
+            Nome validado.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.SignatureValidation.FederalName">
+            <summary>
+            Nome na receita federal.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.SignatureValidation.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.Signer">
+            <summary>
+            Classe de modelo com os dados de um assinante.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.Signer.#ctor">
+            <summary>
+            Método construtor.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Signer.Key">
+            <summary>
+            Chave do signatário. Essa chave é utilizada no Widget Embedded e na requisição para Remover Signatários.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Signer.Created">
+            <summary>
+            Data de criação do signatário no documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Signer.Updated">
+            <summary>
+            Data de atualização do signatário no documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Signer.Email">
+            <summary>
+            Email do signatário que deverá assinar o documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Signer.Name">
+            <summary>
+            Nome completo do signatário.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Signer.HasDocumentation">
+            <summary>
+            Não solicita os campos CPF e data de nascimento do signatário no momento da assinatura. Útil para signatários que
+            não possuem CPF.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Signer.Documentation">
+            <summary>
+            CPF do signatário.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Signer.Birthday">
+            <summary>
+            Data de nascimento do signatário.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Signer.Phone">
+            <summary>
+            Número de telefone para o envio do SMS.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Signer.Auths">
+            <summary>
+            Tipo de autenticação para realizar assinatura.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.Signer.Signature">
+            <summary>
+            Tipo de autenticação para realizar assinatura.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.Signer.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.SignerRequest">
+            <summary>
+            Classe de modelo para assinar documentos via API.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.SignerRequest.SignatureKey">
+            <summary>
+            Chave de requisição de assinatura.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.SignerRequest.Secret">
+            <summary>
+            Codigo de autenticação da requisição
+            </summary>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.UploadRequest">
+            <summary>
+            Objeto com os dados de upload de um documento.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.UploadRequest.#ctor">
+            <summary>
+            Método construtor.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.UploadRequest.Path">
+            <summary>
+            Diretório onde o documento deve ser armazenado.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.UploadRequest.Content">
+            <summary>
+            Conteúdo do documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.UploadRequest.Deadline">
+            <summary>
+            Data limite para efetuar assinaturas no documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.UploadRequest.AutoClose">
+            <summary>
+            Indica que o documento deve ser fechado logo após a última assinatura.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.UploadRequest.Locale">
+            <summary>
+            Localização do documento.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.UploadRequest.SequenceEnabled">
+            <summary>
+            Determina se o documento terá a funcionalidade de ordenação de assinaturas ativada.
+            Ao Adicionar signatário a documento deverá definir o grupo pertencente.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.UploadRequest.RemindInterval">
+            <summary>
+            Determina se o documento terá opção de lembretes automáticos ativada. O intervalo é medido em dias.
+            Com a inclusão do parâmetro serão enviados até três lembretes automaticamente.
+            Intervalos suportados: 1; 2; 3; 7; 14.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.UploadRequest.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Models.WebhookRequest">
+            <summary>
+            Classe que representa uma requisição webhook.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.WebhookRequest.Event">
+            <summary>
+            Dados do evento reportado
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Models.WebhookRequest.Document">
+            <summary>
+            Dados do documento associado ao evento.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Models.WebhookRequest.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Security.HmacSignatureValidator">
+            <summary>
+            Classe responsável pela validação de assinatura de dados vindos de uma requisição Webhook do serviço.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Security.HmacSignatureValidator.Validate(ClickSign.NetCore.Security.WebhookData,System.String)">
+            <summary>
+            Método que efetua a validação do conteúdo da mensagem de acordo com a assinatura Hmac.
+            </summary>
+            <param name="data">dados da requisição à serem validados.</param>
+            <param name="hmacKey">Chave HMAC para validação.</param>
+        </member>
+        <member name="M:ClickSign.NetCore.Security.HmacSignatureValidator.Validate(System.String,System.String,System.String)">
+            <summary>
+            Método que efetua a validação do conteúdo da mensagem de acordo com a assinatura Hmac.
+            </summary>
+            <param name="body">Conteúdo à ser validado.</param>
+            <param name="requestHmac">HMAC enviado juntamente com o conteúdo.</param>
+            <param name="hmacKey">Chave HMAC para validação.</param>
+        </member>
+        <member name="M:ClickSign.NetCore.Security.HmacSignatureValidator.GenerateHmacSignature(System.String,System.String)">
+            <summary>
+            Método que faz a geração do valor Hmac de um conjunto de dados.
+            </summary>
+            <param name="value">Dados à terem seu valor Hmac gerado.</param>
+            <param name="key">Chave de criação.</param>
+            <returns>Assinatura Hmac gerada.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Security.WebhookData">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Security.WebhookData.Body">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCore.Security.WebhookData.Signature">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Security.WebhookData.ToString">
+            <summary>
+            Método que traz uma cadeia de caracteres que representa o objeto atual.
+            </summary>
+            <returns>Cadeia de caracteres que representa o objeto atual.</returns>
+        </member>
+        <member name="T:ClickSign.NetCore.Utils.MimetypeDetector">
+            <summary>
+            Classe estática para detecção do mimetype de arquivos de acordo com a assinatura.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCore.Utils.MimetypeDetector.DetectMimeType(System.IO.Stream)">
+            <summary>
+            Método que identifica o mimetype de um fluxo de dados.
+            </summary>
+            <param name="stream">Fluxo de dados do arquivo à ser analizado.</param>
+            <returns></returns>
+        </member>
+        <member name="T:ClickSign.NetCoreUtils.ApiHelper">
+            <summary>
+            Contem metodos para realizar a comunicação via HttpClient
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.ApiHelper.#ctor(System.String)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="urlBase">Url base da comunicação</param>
+        </member>
+        <member name="P:ClickSign.NetCoreUtils.ApiHelper.UrlBase">
+            <summary>
+            Url base para a comunicação
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.ApiHelper.GetAsync``1(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Realiza uma consulta no endereço especificado na <see cref="P:ClickSign.NetCoreUtils.ApiHelper.UrlBase" /> de forma assíncrona.
+            </summary>
+            <param name="endPoint">O endpoint da url base</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <typeparam name="T">O tipo de dados de retorno</typeparam>
+            <returns>Os dados</returns>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.ApiHelper.PostAsync``1(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Realiza o envio de dados para o endereço especificado na <see cref="P:ClickSign.NetCoreUtils.ApiHelper.UrlBase" /> de forma assíncrona.
+            </summary>
+            <param name="endPoint">O endpoint da url base</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <typeparam name="T">O tipo de dados de retorno</typeparam>
+            <returns>Os dados</returns>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.ApiHelper.PostAsync``1(System.String,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Realiza o envio de dados para o endereço especificado na <see cref="P:ClickSign.NetCoreUtils.ApiHelper.UrlBase" /> de forma assíncrona.
+            </summary>
+            <param name="endPoint">O endpoint da url base</param>
+            <param name="obj">O objeto que sera envia do no corpo da requisição</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <typeparam name="T">O tipo de dados de retorno</typeparam>
+            <returns>Os dados</returns>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.ApiHelper.DeleteAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Realiza o envio de um comando de DELETE para o endereço especificado na <see cref="P:ClickSign.NetCoreUtils.ApiHelper.UrlBase" /> de forma assíncrona.
+            </summary>
+            <param name="endPoint">O endpoint da url base</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.ApiHelper.PatchAsync``1(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Realiza o envio de um comando de PATCH para o endereço especificado na <see cref="P:ClickSign.NetCoreUtils.ApiHelper.UrlBase" /> de forma assíncrona.
+            </summary>
+            <param name="endPoint">O endpoint da url base</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <typeparam name="T">O tipo de dados de retorno</typeparam>
+            <returns>Os dados</returns>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.ApiHelper.PatchAsync``1(System.String,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Realiza o envio de um comando de PATCH para o endereço especificado na <see cref="P:ClickSign.NetCoreUtils.ApiHelper.UrlBase" /> de forma assíncrona.
+            </summary>
+            <param name="endPoint">O endpoint da url base</param>
+            <param name="obj">O objeto que sera envia do no corpo da requisição</param>
+            <param name="cancellationToken">Token de notificação de cancelamento de threads gerenciadas.</param>
+            <typeparam name="T">O tipo de dados de retorno</typeparam>
+            <returns>Os dados</returns>
+        </member>
+        <member name="T:ClickSign.NetCoreUtils.Mimetype.Metadata">
+            <summary>
+            metadata
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.Mimetype.Metadata.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickSign.NetCoreUtils.Mimetype.Metadata" /> class.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCoreUtils.Mimetype.Metadata.Extentions">
+            <summary>
+            Gets or sets the extention list of this metadata.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCoreUtils.Mimetype.Metadata.Offsets">
+            <summary>
+            Gets or sets the offset list of one metadata.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.Mimetype.Metadata.Match(System.Byte[])">
+            <summary>
+            Start match.
+            </summary>
+            <param name="data">The hex head of one file.</param>
+            <returns>match result: matched or not.</returns>
+        </member>
+        <member name="T:ClickSign.NetCoreUtils.Mimetype.MimetypeExtensions">
+            <summary>
+            MyrmecExtentions
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.Mimetype.MimetypeExtensions.Add(System.Collections.Generic.List{ClickSign.NetCoreUtils.Mimetype.Metadata},ClickSign.NetCoreUtils.Mimetype.Record)">
+            <summary>
+            Add metadata into metadata list.
+            </summary>
+            <param name="list">The target list.</param>
+            <param name="record">The metadata record need to add.</param>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.Mimetype.MimetypeExtensions.GetByte(System.String)">
+            <summary>
+            Get byte array from string.
+            </summary>
+            <param name="source">byte format string.</param>
+            <returns>result byte array.</returns>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.Mimetype.MimetypeExtensions.Match(System.Collections.Generic.List{ClickSign.NetCoreUtils.Mimetype.Metadata},System.Byte[],System.Boolean)">
+            <summary>
+            Match result from complex metadata.
+            </summary>
+            <param name="list">The complex metadata list.</param>
+            <param name="data">Data to be match.</param>
+            <param name="matchAll">Match all result or only first that sniffer matched.</param>
+            <returns>Match result list.</returns>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.Mimetype.MimetypeExtensions.Populate(ClickSign.NetCoreUtils.Mimetype.Sniffer,System.Collections.Generic.IList{ClickSign.NetCoreUtils.Mimetype.Record})">
+            <summary>
+            Populate matadata tree use record list.
+            </summary>
+            <param name="sniffer"></param>
+            <param name="records">Matadate record list.</param>
+        </member>
+        <member name="T:ClickSign.NetCoreUtils.Mimetype.MimeTypes">
+            <summary>
+            A mapping of file name extensions to the corresponding MIME-type.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.Mimetype.MimeTypes.GetMimeType(System.String)">
+            <summary>
+            Gets the MIME-type of the file based on the file extension.
+            </summary>
+            <returns>The MIME-type.</returns>
+            <param name="extention">The file name extention.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="extention" /> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="T:ClickSign.NetCoreUtils.Mimetype.Node">
+            <summary>
+            node
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.Mimetype.Node.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickSign.NetCoreUtils.Mimetype.Node" /> class.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCoreUtils.Mimetype.Node.Children">
+            <summary>
+            Gets or sets children.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCoreUtils.Mimetype.Node.Depth">
+            <summary>
+            Gets or sets depth.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCoreUtils.Mimetype.Node.Extentions">
+            <summary>
+            Gets or sets extentions.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCoreUtils.Mimetype.Node.Parent">
+            <summary>
+            Gets or sets parent node.
+            </summary>
+        </member>
+        <member name="T:ClickSign.NetCoreUtils.Mimetype.Offset">
+            <summary>
+            Representing a section of offset.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCoreUtils.Mimetype.Offset.Count">
+            <summary>
+            Gets or sets the count of data array.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCoreUtils.Mimetype.Offset.Start">
+            <summary>
+            Gets or sets the start position of data array.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCoreUtils.Mimetype.Offset.Value">
+            <summary>
+            Gets or sets the AscII string corresponding to the binary value of this data
+            </summary>
+        </member>
+        <member name="T:ClickSign.NetCoreUtils.Mimetype.Record">
+            <summary>
+            Present one record.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.Mimetype.Record.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickSign.NetCoreUtils.Mimetype.Record" /> class.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.Mimetype.Record.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickSign.NetCoreUtils.Mimetype.Record" /> class.
+            </summary>
+            <param name="extentions">extentions string ,split with "," what if it has many.</param>
+            <param name="hex">hex string, split with ",".</param>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.Mimetype.Record.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickSign.NetCoreUtils.Mimetype.Record" /> class.
+            </summary>
+            <param name="extentions">Extentions format string.</param>
+            <param name="hex">File hex head format string.</param>
+            <param name="offset">Offset of this record.</param>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.Mimetype.Record.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickSign.NetCoreUtils.Mimetype.Record" /> class.
+            </summary>
+            <param name="extentions">extentions string ,split with "," what if it has many.</param>
+            <param name="hex">hex string, split with ",".</param>
+            <param name="description">description</param>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.Mimetype.Record.#ctor(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickSign.NetCoreUtils.Mimetype.Record" /> class.
+            </summary>
+            <param name="extentions">extentions string ,split with "," what if it has many.</param>
+            <param name="hex">hex string, split with ",".</param>
+            <param name="offset"></param>
+            <param name="description">description</param>
+        </member>
+        <member name="P:ClickSign.NetCoreUtils.Mimetype.Record.Description">
+            <summary>
+            Gets or sets Description
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCoreUtils.Mimetype.Record.Extentions">
+            <summary>
+            Gets or sets file extentions.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCoreUtils.Mimetype.Record.Hex">
+            <summary>
+            Gets or sets Hex String.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCoreUtils.Mimetype.Record.Offset">
+            <summary>
+            Gets or sets offset
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCoreUtils.Mimetype.Record.IsComplexMetadata">
+            <summary>
+            Gets a value indicating whether this record has offset or contain a variable byte or not.
+            </summary>
+        </member>
+        <member name="T:ClickSign.NetCoreUtils.Mimetype.Sniffer">
+            <summary>
+            sniffer
+            </summary>
+        </member>
+        <member name="F:ClickSign.NetCoreUtils.Mimetype.Sniffer.FileExtentionHelpUrl">
+            <summary>
+            You can get the file extention name detail in this wikipedia page.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.Mimetype.Sniffer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ClickSign.NetCoreUtils.Mimetype.Sniffer" /> class.
+            </summary>
+        </member>
+        <member name="P:ClickSign.NetCoreUtils.Mimetype.Sniffer.ComplexMetadata">
+            <summary>
+            Gets or sets ComplexMetadatas.
+            </summary>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.Mimetype.Sniffer.Add(System.Byte[],System.String[])">
+            <summary>
+            Add a record to matadata tree.
+            </summary>
+            <param name="data">file head.</param>
+            <param name="extentions">file extention list.</param>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.Mimetype.Sniffer.Add(ClickSign.NetCoreUtils.Mimetype.Record)">
+            <summary>
+            </summary>
+            <param name="record"></param>
+        </member>
+        <member name="M:ClickSign.NetCoreUtils.Mimetype.Sniffer.Match(System.Byte[],System.Boolean)">
+            <summary>
+            Find extentions that match the file hex head.
+            </summary>
+            <param name="data">file hex head</param>
+            <param name="matchAll">match all result or only the first.</param>
+            <returns>matched result</returns>
+        </member>
+    </members>
+</doc>

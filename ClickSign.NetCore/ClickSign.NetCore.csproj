@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup Label="Globals">
+        <SccProjectName>SAK</SccProjectName>
+        <SccProvider>SAK</SccProvider>
+        <SccAuxPath>SAK</SccAuxPath>
+        <SccLocalPath>SAK</SccLocalPath>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <SignAssembly>true</SignAssembly>
+        <AssemblyOriginatorKeyFile>ClickSign.snk</AssemblyOriginatorKeyFile>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <Authors>Luis Jr. Jorge</Authors>
+        <Company>Luis Jr. Jorge</Company>
+        <Product>ClickSign.NetCore</Product>
+        <Description>Biblioteca de acesso à api do serviço de assinatura de documentos online ClickSign baseada em .Net Standard 2.0.</Description>
+        <Version>2.0.3</Version>
+        <LangVersion>latest</LangVersion>
+        <Copyright>Luis Jr. Jorge</Copyright>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+        <PackageProjectUrl>https://github.com/luisjurassic/clicksign.netcore</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/luisjurassic/clicksign.netcore</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>clicksign, assinatura, jurídico, C#, .net standard</PackageTags>
+        <AssemblyVersion>2.0.3.0</AssemblyVersion>
+        <FileVersion>2.0.3.0</FileVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <DocumentationFile>ClickSign.NetCore.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DocumentationFile>ClickSign.NetCore.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="LICENSE.md">
+            <Pack>True</Pack>
+            <PackagePath/>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
+    </ItemGroup>
+
+</Project>
