@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace ClickSign.NetCore.Models;
+namespace ClickSign.NetCore.Models.Internals;
 
 /// <summary>
 /// Classe interna para requisição de uplaod de arquivo.
@@ -11,7 +11,7 @@ internal class InternalUploadRequest
     /// Método construtor.
     /// </summary>
     /// <param name="request">Dados do documento à ser enviado ao serviço.</param>
-    internal InternalUploadRequest(UploadRequest request)
+    public InternalUploadRequest(UploadRequest request)
     {
         Document = request;
     }
@@ -20,7 +20,7 @@ internal class InternalUploadRequest
     /// Dados do documento à ser enviado ao serviço.
     /// </summary>
     [JsonProperty("document")]
-    internal UploadRequest Document { get; set; }
+    public UploadRequest Document { get; set; }
 
     /// <summary>
     /// Método que traz uma cadeia de caracteres que representa o objeto atual.

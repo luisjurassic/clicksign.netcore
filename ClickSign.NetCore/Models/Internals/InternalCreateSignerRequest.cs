@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace ClickSign.NetCore.Models;
+namespace ClickSign.NetCore.Models.Internals;
 
 /// <summary>
 /// Classe interna para requisição de criação de assinante.
@@ -11,7 +11,7 @@ internal class InternalCreateSignerRequest
     /// Método construtor
     /// </summary>
     /// <param name="request">Dados do assinante à ser criado.</param>
-    internal InternalCreateSignerRequest(CreateSignerRequest request)
+    public InternalCreateSignerRequest(CreateSignerRequest request)
     {
         Signer = request;
     }
@@ -20,7 +20,7 @@ internal class InternalCreateSignerRequest
     /// Dados do assinante à ser criado.
     /// </summary>
     [JsonProperty("signer")]
-    internal CreateSignerRequest Signer { get; set; }
+    public CreateSignerRequest Signer { get; set; }
 
     /// <summary>
     /// Método que traz uma cadeia de caracteres que representa o objeto atual.

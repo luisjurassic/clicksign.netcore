@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace ClickSign.NetCore.Models;
+namespace ClickSign.NetCore.Models.Internals;
 
 /// <summary>
 /// Classe interna para requisição de criação de assinatura em lotes.
@@ -20,7 +20,7 @@ internal class InternalBatchRequest
     /// Dados da assinatura em lote à ser criada.
     /// </summary>
     [JsonProperty("batch")]
-    internal BatchRequest Batch { get; set; }
+    public BatchRequest Batch { get; set; }
 
     /// <summary>
     /// Método que traz uma cadeia de caracteres que representa o objeto atual.

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using ClickSign.NetCore.Enumerators;
 using ClickSign.NetCore.Exceptions;
 using ClickSign.NetCore.Models;
+using ClickSign.NetCore.Models.Internals;
 using ClickSign.NetCoreUtils;
 
 namespace ClickSign.NetCore;
@@ -47,7 +48,7 @@ public class ClickSignClient
     /// <returns>Dados do documento criado no ambiente.</returns>
     public Document Upload(UploadRequest request)
     {
-        var result = UploadAsync(request).Result;
+        Document result = UploadAsync(request).Result;
         return result;
     }
 
@@ -61,9 +62,9 @@ public class ClickSignClient
     {
         try
         {
-            var uploadRequest = new InternalUploadRequest(request);
+            InternalUploadRequest uploadRequest = new(request);
 
-            var result = await Client.PostAsync<InternalResponse>($"v1/documents?access_token={ApiKey}", uploadRequest, cancellationToken);
+            InternalResponse result = await Client.PostAsync<InternalResponse>($"v1/documents?access_token={ApiKey}", uploadRequest, cancellationToken);
 
             return result.Document;
         }
@@ -83,7 +84,7 @@ public class ClickSignClient
     /// <returns>Lista contendo os dados de todos os documentos do serviço.</returns>
     public IEnumerable<Document> Get()
     {
-        var result = GetAsync().Result;
+        IEnumerable<Document> result = GetAsync().Result;
         return result;
     }
 
@@ -96,7 +97,7 @@ public class ClickSignClient
     {
         try
         {
-            var result = await Client.GetAsync<InternalResponse>($"v1/documents?access_token={ApiKey}", cancellationToken);
+            InternalResponse result = await Client.GetAsync<InternalResponse>($"v1/documents?access_token={ApiKey}", cancellationToken);
 
             return result.Documents;
         }
@@ -117,7 +118,7 @@ public class ClickSignClient
     /// <returns>Dados do documento associado à chave informada. <see cref="Document" /></returns>
     public Document Get(Guid key)
     {
-        var result = GetAsync(key).Result;
+        Document result = GetAsync(key).Result;
         return result;
     }
 
@@ -131,7 +132,7 @@ public class ClickSignClient
     {
         try
         {
-            var result = await Client.GetAsync<InternalResponse>($"v1/documents/{key}?access_token={ApiKey}", cancellationToken);
+            InternalResponse result = await Client.GetAsync<InternalResponse>($"v1/documents/{key}?access_token={ApiKey}", cancellationToken);
 
             return result.Document;
         }
@@ -152,7 +153,7 @@ public class ClickSignClient
     /// <returns>Dados do documento associado à chave informada. <see cref="Document" /></returns>
     public Document Finalize(Guid key)
     {
-        var result = FinalizeAsync(key).Result;
+        Document result = FinalizeAsync(key).Result;
         return result;
     }
 
@@ -166,7 +167,7 @@ public class ClickSignClient
     {
         try
         {
-            var result = await Client.PatchAsync<InternalResponse>($"v1/documents/{key}/finish?access_token={ApiKey}", cancellationToken);
+            InternalResponse result = await Client.PatchAsync<InternalResponse>($"v1/documents/{key}/finish?access_token={ApiKey}", cancellationToken);
 
             return result.Document;
         }
@@ -187,7 +188,7 @@ public class ClickSignClient
     /// <returns>Dados do documento associado à chave informada. <see cref="Document" /></returns>
     public Document Cancel(Guid key)
     {
-        var result = CancelAsync(key).Result;
+        Document result = CancelAsync(key).Result;
         return result;
     }
 
@@ -201,7 +202,7 @@ public class ClickSignClient
     {
         try
         {
-            var result = await Client.PatchAsync<InternalResponse>($"v1/documents/{key}/cancel?access_token={ApiKey}", cancellationToken);
+            InternalResponse result = await Client.PatchAsync<InternalResponse>($"v1/documents/{key}/cancel?access_token={ApiKey}", cancellationToken);
 
             return result.Document;
         }
@@ -222,7 +223,7 @@ public class ClickSignClient
     /// <returns>Dados do documento duplicado. <see cref="Document" /></returns>
     public Document Duplicate(Guid key)
     {
-        var result = DuplicateAsync(key).Result;
+        Document result = DuplicateAsync(key).Result;
         return result;
     }
 
@@ -236,7 +237,7 @@ public class ClickSignClient
     {
         try
         {
-            var result = await Client.PostAsync<InternalResponse>($"v1/documents/{key}/duplicate?access_token={ApiKey}", cancellationToken);
+            InternalResponse result = await Client.PostAsync<InternalResponse>($"v1/documents/{key}/duplicate?access_token={ApiKey}", cancellationToken);
 
             return result.Document;
         }
@@ -257,7 +258,7 @@ public class ClickSignClient
     /// <returns>Dados do assinante referentes à chave informada. <see cref="Signer" /></returns>
     public Signer GetSigner(Guid key)
     {
-        var result = GetSignerAsync(key).Result;
+        Signer result = GetSignerAsync(key).Result;
         return result;
     }
 
@@ -271,7 +272,7 @@ public class ClickSignClient
     {
         try
         {
-            var result = await Client.GetAsync<InternalResponse>($"v2/signers/{key}?access_token={ApiKey}", cancellationToken);
+            InternalResponse result = await Client.GetAsync<InternalResponse>($"v2/signers/{key}?access_token={ApiKey}", cancellationToken);
 
             return result.Signer;
         }
@@ -292,7 +293,7 @@ public class ClickSignClient
     /// <returns>Dados do assinante recém criado. <see cref="Signer" /></returns>
     public Signer CreateSigner(CreateSignerRequest request)
     {
-        var result = CreateSignerAsync(request).Result;
+        Signer result = CreateSignerAsync(request).Result;
         return result;
     }
 
@@ -306,8 +307,8 @@ public class ClickSignClient
     {
         try
         {
-            var createRequest = new InternalCreateSignerRequest(request);
-            var result = await Client.PostAsync<InternalResponse>($"v1/signers?access_token={ApiKey}", createRequest, cancellationToken);
+            InternalCreateSignerRequest createRequest = new(request);
+            InternalResponse result = await Client.PostAsync<InternalResponse>($"v1/signers?access_token={ApiKey}", createRequest, cancellationToken);
 
             return result.Signer;
         }
@@ -328,7 +329,7 @@ public class ClickSignClient
     /// <returns>Resposta da adição do assinante ao documento. <see cref="AddSignerResponse" /></returns>
     public AddSignerResponse AddSignerToDocument(AddSignerRequest request)
     {
-        var result = AddSignerToDocumentAsync(request).Result;
+        AddSignerResponse result = AddSignerToDocumentAsync(request).Result;
         return result;
     }
 
@@ -342,8 +343,8 @@ public class ClickSignClient
     {
         try
         {
-            var addRequest = new InternalAddSignerDocumentRequest(request);
-            var result = await Client.PostAsync<InternalResponse>($"v1/lists?access_token={ApiKey}", addRequest, cancellationToken);
+            InternalAddSignerDocumentRequest addRequest = new(request);
+            InternalResponse result = await Client.PostAsync<InternalResponse>($"v1/lists?access_token={ApiKey}", addRequest, cancellationToken);
 
             return result.List;
         }
@@ -494,7 +495,7 @@ public class ClickSignClient
     /// <returns>Lista contendo os dados de todos os webhooks.</returns>
     public IEnumerable<HooksRequest> GetHooks()
     {
-        var result = GetHooksAsync().Result;
+        IEnumerable<HooksRequest> result = GetHooksAsync().Result;
         return result;
     }
 
@@ -507,7 +508,7 @@ public class ClickSignClient
     {
         try
         {
-            var result = await Client.GetAsync<InternalResponse>($"v2/webhooks?access_token={ApiKey}", cancellationToken);
+            InternalResponse result = await Client.GetAsync<InternalResponse>($"v2/webhooks?access_token={ApiKey}", cancellationToken);
 
             return result.Webhooks;
         }
@@ -527,7 +528,7 @@ public class ClickSignClient
     /// <returns>Dados da conta.</returns>
     public Account GetAccount()
     {
-        var result = GetAccountAsync().Result;
+        Account result = GetAccountAsync().Result;
         return result;
     }
 
@@ -540,7 +541,7 @@ public class ClickSignClient
     {
         try
         {
-            var result = await Client.GetAsync<InternalResponse>($"v1/accounts?access_token={ApiKey}", cancellationToken);
+            InternalResponse result = await Client.GetAsync<InternalResponse>($"v1/accounts?access_token={ApiKey}", cancellationToken);
 
             return result.Account;
         }
@@ -562,7 +563,7 @@ public class ClickSignClient
     /// <returns>Dados da assinatura em lotes criada. Veja <see cref="BatchResponse" />.</returns>
     public BatchResponse CreateBatch(BatchRequest request)
     {
-        var result = CreateBatchAsync(request).Result;
+        BatchResponse result = CreateBatchAsync(request).Result;
         return result;
     }
 
@@ -576,8 +577,8 @@ public class ClickSignClient
     {
         try
         {
-            var batchRequest = new InternalBatchRequest(request);
-            var result = await Client.PostAsync<BatchResponse>($"v1/batches?access_token={ApiKey}", batchRequest, cancellationToken);
+            InternalBatchRequest batchRequest = new(request);
+            BatchResponse result = await Client.PostAsync<BatchResponse>($"v1/batches?access_token={ApiKey}", batchRequest, cancellationToken);
 
             return result;
         }

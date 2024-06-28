@@ -18,7 +18,7 @@
         <Company>Luis Jr. Jorge</Company>
         <Product>ClickSign.NetCore</Product>
         <Description>Biblioteca de acesso à api do serviço de assinatura de documentos online ClickSign baseada em .Net Standard 2.0.</Description>
-        <Version>2.0.3</Version>
+        <Version>2.0.4</Version>
         <LangVersion>latest</LangVersion>
         <Copyright>Luis Jr. Jorge</Copyright>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
@@ -26,8 +26,8 @@
         <RepositoryUrl>https://github.com/luisjurassic/clicksign.netcore</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>clicksign, assinatura, jurídico, C#, .net standard</PackageTags>
-        <AssemblyVersion>2.0.3.0</AssemblyVersion>
-        <FileVersion>2.0.3.0</FileVersion>
+        <AssemblyVersion>2.0.4.1</AssemblyVersion>
+        <FileVersion>2.0.4.1</FileVersion>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

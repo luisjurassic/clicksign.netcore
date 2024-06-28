@@ -1845,135 +1845,135 @@
             Data de criação da mensagem
             </summary>
         </member>
-        <member name="T:ClickSign.NetCore.Models.InternalAddSignerDocumentRequest">
+        <member name="T:ClickSign.NetCore.Models.Internals.InternalAddSignerDocumentRequest">
             <summary>
             Classe interna para requisição de adição de um assinante à um documento.
             </summary>
         </member>
-        <member name="M:ClickSign.NetCore.Models.InternalAddSignerDocumentRequest.#ctor(ClickSign.NetCore.Models.AddSignerRequest)">
+        <member name="M:ClickSign.NetCore.Models.Internals.InternalAddSignerDocumentRequest.#ctor(ClickSign.NetCore.Models.AddSignerRequest)">
             <summary>
             Método construtor.
             </summary>
             <param name="request">Dados do assinante à ser adicionado à um documento.</param>
         </member>
-        <member name="P:ClickSign.NetCore.Models.InternalAddSignerDocumentRequest.List">
+        <member name="P:ClickSign.NetCore.Models.Internals.InternalAddSignerDocumentRequest.List">
             <summary>
             Dados do assinante à ser adicionado à um documento.
             </summary>
         </member>
-        <member name="M:ClickSign.NetCore.Models.InternalAddSignerDocumentRequest.ToString">
+        <member name="M:ClickSign.NetCore.Models.Internals.InternalAddSignerDocumentRequest.ToString">
             <summary>
             Método que traz uma cadeia de caracteres que representa o objeto atual.
             </summary>
             <returns>Cadeia de caracteres que representa o objeto atual.</returns>
         </member>
-        <member name="T:ClickSign.NetCore.Models.InternalBatchRequest">
+        <member name="T:ClickSign.NetCore.Models.Internals.InternalBatchRequest">
             <summary>
             Classe interna para requisição de criação de assinatura em lotes.
             </summary>
         </member>
-        <member name="M:ClickSign.NetCore.Models.InternalBatchRequest.#ctor(ClickSign.NetCore.Models.BatchRequest)">
+        <member name="M:ClickSign.NetCore.Models.Internals.InternalBatchRequest.#ctor(ClickSign.NetCore.Models.BatchRequest)">
             <summary>
             Método construtor.
             </summary>
             <param name="request">Dados da assinatura em lote à ser criada.</param>
         </member>
-        <member name="P:ClickSign.NetCore.Models.InternalBatchRequest.Batch">
+        <member name="P:ClickSign.NetCore.Models.Internals.InternalBatchRequest.Batch">
             <summary>
             Dados da assinatura em lote à ser criada.
             </summary>
         </member>
-        <member name="M:ClickSign.NetCore.Models.InternalBatchRequest.ToString">
+        <member name="M:ClickSign.NetCore.Models.Internals.InternalBatchRequest.ToString">
             <summary>
             Método que traz uma cadeia de caracteres que representa o objeto atual.
             </summary>
             <returns>Cadeia de caracteres que representa o objeto atual.</returns>
         </member>
-        <member name="T:ClickSign.NetCore.Models.InternalCreateSignerRequest">
+        <member name="T:ClickSign.NetCore.Models.Internals.InternalCreateSignerRequest">
             <summary>
             Classe interna para requisição de criação de assinante.
             </summary>
         </member>
-        <member name="M:ClickSign.NetCore.Models.InternalCreateSignerRequest.#ctor(ClickSign.NetCore.Models.CreateSignerRequest)">
+        <member name="M:ClickSign.NetCore.Models.Internals.InternalCreateSignerRequest.#ctor(ClickSign.NetCore.Models.CreateSignerRequest)">
             <summary>
             Método construtor
             </summary>
             <param name="request">Dados do assinante à ser criado.</param>
         </member>
-        <member name="P:ClickSign.NetCore.Models.InternalCreateSignerRequest.Signer">
+        <member name="P:ClickSign.NetCore.Models.Internals.InternalCreateSignerRequest.Signer">
             <summary>
             Dados do assinante à ser criado.
             </summary>
         </member>
-        <member name="M:ClickSign.NetCore.Models.InternalCreateSignerRequest.ToString">
+        <member name="M:ClickSign.NetCore.Models.Internals.InternalCreateSignerRequest.ToString">
             <summary>
             Método que traz uma cadeia de caracteres que representa o objeto atual.
             </summary>
             <returns>Cadeia de caracteres que representa o objeto atual.</returns>
         </member>
-        <member name="T:ClickSign.NetCore.Models.InternalResponse">
+        <member name="T:ClickSign.NetCore.Models.Internals.InternalResponse">
             <summary>
             Classe de resposta das requisições ao serviço.
             </summary>
         </member>
-        <member name="P:ClickSign.NetCore.Models.InternalResponse.Document">
+        <member name="P:ClickSign.NetCore.Models.Internals.InternalResponse.Document">
             <summary>
             Documento criado ou retornado com base na chave informada.
             </summary>
         </member>
-        <member name="P:ClickSign.NetCore.Models.InternalResponse.Documents">
+        <member name="P:ClickSign.NetCore.Models.Internals.InternalResponse.Documents">
             <summary>
             Lista de documentos criados ou retornados.
             </summary>
         </member>
-        <member name="P:ClickSign.NetCore.Models.InternalResponse.Webhooks">
+        <member name="P:ClickSign.NetCore.Models.Internals.InternalResponse.Webhooks">
             <summary>
             Lista de webhooks criados ou retornados.
             </summary>
         </member>
-        <member name="P:ClickSign.NetCore.Models.InternalResponse.Signer">
+        <member name="P:ClickSign.NetCore.Models.Internals.InternalResponse.Signer">
             <summary>
             Assinante criado ou retornado com base na chave informada.
             </summary>
         </member>
-        <member name="P:ClickSign.NetCore.Models.InternalResponse.List">
+        <member name="P:ClickSign.NetCore.Models.Internals.InternalResponse.List">
             <summary>
             Dados da associação de um assinante à um documento.
             </summary>
         </member>
-        <member name="P:ClickSign.NetCore.Models.InternalResponse.Batch">
+        <member name="P:ClickSign.NetCore.Models.Internals.InternalResponse.Batch">
             <summary>
             Dados de resposta à criação de uma assinatura em lotes.
             </summary>
         </member>
-        <member name="P:ClickSign.NetCore.Models.InternalResponse.Account">
+        <member name="P:ClickSign.NetCore.Models.Internals.InternalResponse.Account">
             <summary>
             Dados de resposta de uma conta.
             </summary>
         </member>
-        <member name="M:ClickSign.NetCore.Models.InternalResponse.ToString">
+        <member name="M:ClickSign.NetCore.Models.Internals.InternalResponse.ToString">
             <summary>
             Método que traz uma cadeia de caracteres que representa o objeto atual.
             </summary>
             <returns>Cadeia de caracteres que representa o objeto atual.</returns>
         </member>
-        <member name="T:ClickSign.NetCore.Models.InternalUploadRequest">
+        <member name="T:ClickSign.NetCore.Models.Internals.InternalUploadRequest">
             <summary>
             Classe interna para requisição de uplaod de arquivo.
             </summary>
         </member>
-        <member name="M:ClickSign.NetCore.Models.InternalUploadRequest.#ctor(ClickSign.NetCore.Models.UploadRequest)">
+        <member name="M:ClickSign.NetCore.Models.Internals.InternalUploadRequest.#ctor(ClickSign.NetCore.Models.UploadRequest)">
             <summary>
             Método construtor.
             </summary>
             <param name="request">Dados do documento à ser enviado ao serviço.</param>
         </member>
-        <member name="P:ClickSign.NetCore.Models.InternalUploadRequest.Document">
+        <member name="P:ClickSign.NetCore.Models.Internals.InternalUploadRequest.Document">
             <summary>
             Dados do documento à ser enviado ao serviço.
             </summary>
         </member>
-        <member name="M:ClickSign.NetCore.Models.InternalUploadRequest.ToString">
+        <member name="M:ClickSign.NetCore.Models.Internals.InternalUploadRequest.ToString">
             <summary>
             Método que traz uma cadeia de caracteres que representa o objeto atual.
             </summary>
