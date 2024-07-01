@@ -1,5 +1,7 @@
 # ClickSign NetCore
-Biblioteca de acesso à api do serviço de assinatura de documentos online ClickSign, baseada em .Net Standard 2.0. Esse projeto é um fork do repositório [Cardinal.ClickSign](https://github.com/kandrakah/Cardinal.ClickSign).
+Baseada em .Net Standard 2.0 essa biblioteca foi desenvolvida para auxiliar a implantação da API do serviço de assinatura de documentos online **ClickSign**. Esse projeto é um fork do repositório [Cardinal.ClickSign](https://github.com/kandrakah/Cardinal.ClickSign), eu trabalhei para atualizar e melhorar os serviços e integrações com a API.
+
+**IMPORTANTE:** A biblioteca **ClickSign.NetCore** atende a versão **v1(sem envolope)** da API da **Clicksign**. Para saber mais você pode ler a documentação oficial da **ClickSign** [clicando aqui](https://developers.clicksign.com/v1.0/docs/introducao-a-documentacao).
 
 ### Como usar?
  
